@@ -17,6 +17,8 @@
  > [game name] is a text-based role-playing game where you can play as different character types such as: [character-name-1], [character-name-2], or [character-name-3]. Depending on your selected character, you will have different items and abilities to choose from. You encounter enemies like [list of enemies]. To win the game, you must beat the final boss, [boss-name]. There are two difficulties to choose from, normal (all items and abilities available) and hard (tougher enemies and no healing abilities). 
  
  > * Why is it important or interesting to you?
+ 
+ > The group unanimously agreed to create a role-playing game for our final project because everyone in the group likes to play games and finds joy in the wonders of storytelling. Furthermore, we wanted to see what it would be like to be on the development side of gaming instead of just playing.
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
  > * What will be the input/output of your project?
  > * What are the features that the project provides?
