@@ -19,7 +19,10 @@
  > * Why is it important or interesting to you?
  
  > The group unanimously agreed to create a role-playing game for our final project because everyone in the group likes to play games and finds joy in the wonders of storytelling. Furthermore, we wanted to see what it would be like to be on the development side of gaming instead of just playing.
+ 
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+ 
+ > To build the RPG, we plan to use C++ as the language, VSCode to write the code, and Github to store everyone’s work/contribution in one place.
  > * What will be the input/output of your project?
  > * What are the features that the project provides?
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
