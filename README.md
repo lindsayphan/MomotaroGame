@@ -14,7 +14,7 @@
 > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
 
 ## Project Description
- > [game name] is a text-based role-playing game where you can play as different character types such as: [character-name-1], [character-name-2], or [character-name-3]. Depending on your selected character, you will have different items and abilities to choose from. You encounter enemies like [list of enemies]. To win the game, you must beat the final boss, [boss-name]. There are two difficulties to choose from, normal (all items and abilities available) and hard (tougher enemies and no healing abilities). 
+ > [game name] is a text-based role-playing game where you can play as different character types such as: [character-name-1], [character-name-2], or [character-name-3]. Depending on your selected character, you will have different items and abilities to choose from. You encounter enemies like [list of enemies]. To win the game, you must beat the final boss, [boss-name]. There are two difficulties to choose from: normal (all items and abilities available) and hard (tougher enemies and no healing abilities). 
  
  > * Why is it important or interesting to you?
  
@@ -22,8 +22,13 @@
  
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
  
- > To build the RPG, we plan to use C++ as the language, VSCode to write the code, and Github to store everyone’s work/contribution in one place.
+ > To build the RPG, we plan to use C++ as the language, VSCode to write the code, and GitHub to store everyone’s work/contribution in one place.
+ 
  > * What will be the input/output of your project?
+ 
+ > The project will ask the user/player to choose between options concerning the action they want. For example, the options might include — but are not limited to: Which character type would you like to play as? Do you want to attack or run away? What items would you like to use?
+Depending on the choice made by the user, the corresponding action will be taken and displayed — as well as the consequences that follow the chosen option. Additionally, the player prompts (mentioned above) will be displayed on the screen for the user to read.
+
  > * What are the features that the project provides?
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
  > 
