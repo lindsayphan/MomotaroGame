@@ -30,7 +30,9 @@
 Depending on the choice made by the user, the corresponding action will be taken and displayed — as well as the consequences that follow the chosen option. Additionally, the player prompts (mentioned above) will be displayed on the screen for the user to read.
 
  > * What are the features that the project provides?
- > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
+ 
+ > The game has features such as three (3) different character types to choose from, multiple inventory items and attack abilities whose selection depends on the selected character, two (2) difficulty levels — normal and hard, access to character health and inventory items at user’s convenience, enemies to battle along the way, a boss to defeat to finish the game, and an option to restart the game once the player reaches the end (may that be through winning or losing).
+ 
  > 
  > ## Phase II
  > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
