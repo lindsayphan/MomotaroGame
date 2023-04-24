@@ -1,6 +1,6 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10868992&assignment_repo_type=AssignmentRepo)
  
-# \<Project title\>
+# Momotaro: The Fight
  
  > Authors: [Jemaima Roie Ceralde](https://github.com/jaeceralde), [Alice Lai](https://github.com/AliceLaiHK), [Lindsay Phan](https://github.com/lindsayphan), & [Eunice Wang](https://github.com/ewang117)
 
@@ -14,7 +14,7 @@
 > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
 
 ## Project Description
- > [game name] is a text-based role-playing game where you can play as different character types such as: [character-name-1], [character-name-2], or [character-name-3]. Depending on your selected character, you will have different items and abilities to choose from. You encounter enemies like [list of enemies]. To win the game, you must beat the final boss, [boss-name]. There are two difficulties to choose from: normal (all items and abilities available) and hard (tougher enemies and no healing abilities). 
+ > _Momotaro: The Fight_ is a text-based role-playing game where the player embarks on a journey to defeat the darkness that is threatening to destroy their hometown. They play as Momotaro and are given a choice between 3 legendary animals — a dog, a monkey, and a bird — to aid them on their journey. Depending on their selected companion, they will be granted different abilities. They encounter enemies like demons, devils, and monsters to which they must defeat with the assistance of their legendary fauna through a series of battles. To win the game, the player must beat the final boss, the Demon King. There are two difficulties to choose from: normal (all items and abilities available) and hard (tougher enemies and no healing abilities), for those who like more of a challenge. 
  
  > * Why is it important or interesting to you?
  
@@ -26,7 +26,7 @@
  
  > * What will be the input/output of your project?
  
- > The project will ask the user/player to choose between options concerning the action they want. For example, the options might include — but are not limited to: Which character type would you like to play as? Do you want to attack or run away? What items would you like to use?
+ > The project will ask the user/player to choose between options concerning the action they want. For example, the options might include — but are not limited to: Which companion would you like to have? Do you want to attack or run away? What items would you like to use?
 Depending on the choice made by the user, the corresponding action will be taken and displayed — as well as the consequences that follow the chosen option. Additionally, the player prompts (mentioned above) will be displayed on the screen for the user to read.
 
  > * What are the features that the project provides?
