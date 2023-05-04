@@ -2,36 +2,24 @@
  
 # Momotaro: The Fight
  
- > Authors: [Jemaima Roie Ceralde](https://github.com/jaeceralde), [Alice Lai](https://github.com/AliceLaiHK), [Lindsay Phan](https://github.com/lindsayphan), & [Eunice Wang](https://github.com/ewang117)
-
- > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
-
- > ## Expectations
- > * The backend of your project should be implemented in C++. If you wish to choose anoher programming language (e.g. Java, Python), please discuss with your lab TA to obtain permission.
- > * You can incorporate additional technologies/tools but they must be approved (in writing) by the instructor or the TA.
- > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
- > * **Each member of the group must actively participate in the Github Project board, writing unit tests, and reviewing commited code.**
-> * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
+ Authors: [Jemaima Roie Ceralde](https://github.com/jaeceralde), [Alice Lai](https://github.com/AliceLaiHK), [Lindsay Phan](https://github.com/lindsayphan), & [Eunice Wang](https://github.com/ewang117)
 
 ## Project Description
- > _Momotaro: The Fight_ is a text-based role-playing game where the player embarks on a journey to defeat the darkness that is threatening to destroy their hometown. They play as Momotaro and are given a choice between 3 legendary animals — a dog, a monkey, and a bird — to aid them on their journey. Depending on their selected companion, they will be granted different abilities. They encounter enemies like demons, devils, and monsters to which they must defeat with the assistance of their legendary fauna through a series of battles. To win the game, the player must beat the final boss, the Demon King. There are two difficulties to choose from: normal (all items and abilities available) and hard (tougher enemies and no healing abilities), for those who like more of a challenge. 
+_Momotaro: The Fight_ is a text-based role-playing game where the player embarks on a journey to defeat the darkness that is threatening to destroy their hometown. They play as Momotaro and are given a choice between 3 legendary animals — a dog, a monkey, and a bird — to aid them on their journey. Depending on their selected companion, they will be granted different abilities. They encounter enemies like demons, devils, and monsters to which they must defeat with the assistance of their legendary fauna through a series of battles. To win the game, the player must beat the final boss, the Demon King. There are two difficulties to choose from: normal (all items and abilities available) and hard (tougher enemies and no healing abilities), for those who like more of a challenge. 
  
- > * Why is it important or interesting to you?
+Why is it important or interesting to you?
+* The group unanimously agreed to create a role-playing game for our final project because everyone in the group likes to play games and finds joy in the wonders of storytelling. Furthermore, we wanted to see what it would be like to be on the development side of gaming instead of just playing.
  
- > The group unanimously agreed to create a role-playing game for our final project because everyone in the group likes to play games and finds joy in the wonders of storytelling. Furthermore, we wanted to see what it would be like to be on the development side of gaming instead of just playing.
+What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+* To build the RPG, we plan to use C++ as the language, VSCode to write the code, and GitHub to store everyone’s work/contribution in one place.
  
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- 
- > To build the RPG, we plan to use C++ as the language, VSCode to write the code, and GitHub to store everyone’s work/contribution in one place.
- 
- > * What will be the input/output of your project?
- 
- > The project will ask the user/player to choose between options concerning the action they want. For example, the options might include — but are not limited to: Which companion would you like to have? Do you want to attack or run away? What items would you like to use?
+What will be the input/output of your project?
+* The project will ask the user/player to choose between options concerning the action they want. For example, the options might include — but are not limited to: Which companion would you like to have? Do you want to attack or run away? What items would you like to use?
 Depending on the choice made by the user, the corresponding action will be taken and displayed — as well as the consequences that follow the chosen option. Additionally, the player prompts (mentioned above) will be displayed on the screen for the user to read.
 
- > * What are the features that the project provides?
+What are the features that the project provides?
  
- > The game has features such as three (3) different character types to choose from, multiple inventory items and attack abilities whose selection depends on the selected character, two (2) difficulty levels — normal and hard, access to character health and inventory items at user’s convenience, enemies to battle along the way, a boss to defeat to finish the game, and an option to restart the game once the player reaches the end (may that be through winning or losing).
+* The game has features such as three (3) different character types to choose from, multiple inventory items and attack abilities whose selection depends on the selected character, two (2) difficulty levels — normal and hard, access to character health and inventory items at user’s convenience, enemies to battle along the way, a boss to defeat to finish the game, and an option to restart the game once the player reaches the end (may that be through winning or losing).
  
  > 
  > ## Phase II
