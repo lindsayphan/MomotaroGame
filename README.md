@@ -15,7 +15,8 @@ What languages/tools/technologies do you plan to use? (This list may change over
     - _C++_ as the language  
     - _VSCode_ to write the code  
     - _GitHub_ to store everyone’s work/contribution in one place  
-    - _[creately.com](creately.com)_ to create the user navigation diagram  
+    - _[creately.com](creately.com)_ to create the user navigation diagram 
+    - _[diagrams.net](diagrams.net)_ to create the class diagram
  
 What will be the input/output of your project?
 * The project will ask the user/player to choose between options concerning the action they want. For example, the options might include — but are not limited to: Which companion would you like to have? How do you want to attack? What items would you like to use?
