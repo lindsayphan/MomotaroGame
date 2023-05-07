@@ -5,16 +5,20 @@
  Authors: [Jemaima Roie Ceralde](https://github.com/jaeceralde), [Alice Lai](https://github.com/AliceLaiHK), [Lindsay Phan](https://github.com/lindsayphan), & [Eunice Wang](https://github.com/ewang117)
 
 ## Project Description
-_Momotaro: The Fight_ is a text-based role-playing game where the player embarks on a journey to defeat the darkness that is threatening to destroy their hometown. They play as Momotaro and are given a choice between 3 legendary animals — a dog, a monkey, and a bird — to aid them on their journey. Depending on their selected companion, they will be granted different abilities. They encounter enemies like demons, devils, and monsters to which they must defeat with the assistance of their legendary fauna through a series of battles. To win the game, the player must beat the final boss, the Demon King. There are two difficulties to choose from: normal (all items and abilities available) and hard (tougher enemies and no healing abilities), for those who like more of a challenge. 
+_Momotaro: The Fight_ is a text-based role-playing game where the player embarks on a journey to defeat the darkness that is threatening to destroy their hometown. They play as Momotaro and are destined to meet 3 legendary animals — a dog, a monkey, and a bird — to aid them on their journey. Depending on their selected companion at a given time, they will be granted different abilities. Furthermore, they will be rewarded with rice cakes and green tea to help them gather their strength. Along the way, they will encounter onis to which they must defeat with the assistance of their legendary fauna through a series of battles. To win the game, the player must beat the final boss, the Demon King. There are two difficulties to choose from: normal (all items and abilities available) and hard (tougher enemies and no healing abilities), for those who like more of a challenge. 
  
 Why is it important or interesting to you?
 * The group unanimously agreed to create a role-playing game for our final project because everyone in the group likes to play games and finds joy in the wonders of storytelling. Furthermore, we wanted to see what it would be like to be on the development side of gaming instead of just playing.
  
 What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
-* To build the RPG, we plan to use C++ as the language, VSCode to write the code, and GitHub to store everyone’s work/contribution in one place.
+* To build the RPG, we used the following:
+    _C++_ as the language
+    _VSCode_ to write the code
+    _GitHub_ to store everyone’s work/contribution in one place
+    _Creately_ to create the user navigation diagram
  
 What will be the input/output of your project?
-* The project will ask the user/player to choose between options concerning the action they want. For example, the options might include — but are not limited to: Which companion would you like to have? Do you want to attack or run away? What items would you like to use?
+* The project will ask the user/player to choose between options concerning the action they want. For example, the options might include — but are not limited to: Which companion would you like to have? How do you want to attack? What items would you like to use?
 Depending on the choice made by the user, the corresponding action will be taken and displayed — as well as the consequences that follow the chosen option. Additionally, the player prompts (mentioned above) will be displayed on the screen for the user to read.
 
 What are the features that the project provides?
@@ -34,10 +38,9 @@ What are the features that the project provides?
  >     * The tasks you are planning for the first sprint
  >     * How work will be divided between the team members
 ## User Interface Specification
- > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc))
-
 ### Navigation Diagram
-> Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.
+![General Navigation Diagram](screencaps/GeneralNaviDiagram.jpg)
+The diagram represents the general flow of the game. Between the storytelling, the player will be prompted to select amongst the displayed options. Depending on their choice, the story will proceed accordingly. A number of loops exist in the program, as depicted in the diagram linked above, because there is a circular pattern linking the story (of the game) and the actions (available for a vote) together.
 
 ### Screen Layouts
 > Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
@@ -79,4 +82,3 @@ What are the features that the project provides?
  > Instructions on installing and running your application
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- 
