@@ -11,11 +11,11 @@ Why is it important or interesting to you?
 * The group unanimously agreed to create a role-playing game for our final project because everyone in the group likes to play games and finds joy in the wonders of storytelling. Furthermore, we wanted to see what it would be like to be on the development side of gaming instead of just playing.
  
 What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
-* To build the RPG, we used the following:
-    _C++_ as the language
-    _VSCode_ to write the code
-    _GitHub_ to store everyone’s work/contribution in one place
-    _Creately_ to create the user navigation diagram
+* To build the RPG, we used the following:  
+    - _C++_ as the language  
+    - _VSCode_ to write the code  
+    - _GitHub_ to store everyone’s work/contribution in one place  
+    - _[creately.com](creately.com)_ to create the user navigation diagram  
  
 What will be the input/output of your project?
 * The project will ask the user/player to choose between options concerning the action they want. For example, the options might include — but are not limited to: Which companion would you like to have? How do you want to attack? What items would you like to use?
@@ -40,12 +40,12 @@ What are the features that the project provides?
 ## User Interface Specification
 ### Navigation Diagram
 ![General Navigation Diagram](screencaps/GeneralNaviDiagram.jpg)
-The diagram represents the general flow of the game. Between the storytelling, the player will be prompted to select amongst the displayed options. Depending on their choice, the story will proceed accordingly. A number of loops exist in the program, as depicted in the diagram linked above, because there is a circular pattern linking the story (of the game) and the actions (available for a vote) together.
+The diagram represents the general flow of the game. Between the storytelling, the player will be prompted to select amongst the displayed options. Depending on their choice, the story will proceed accordingly. A number of loops exist in the program, as depicted in the diagram above, because there is a circular pattern linking the story (of the game) and the actions (available for a vote) together.
 
 ### Screen Layouts
 The game is entirely played in the terminal and will mainly use two screens: one for the narrative/story parts and one for the combat/fighting parts. Additionally, there is an inventory, swap (companions), and stats screen. 
 * Narrative: outputs a description of the current setting/story beat, then prompts the user to make a decision. 
-   - Expected input: 'YES' or 'NO' to progress the story, 'INVENTORY', 'SWAP', or 'STATS' to change companion or view information. 
+   - Expected input: 'YES' or 'NO' to progress the story; 'INVENTORY', 'SWAP', or 'STATS' to change companion or view information. 
    
    ![Narrative Screen ex](screencaps/narrative_screen_example.PNG)
 * Combat: outputs current health of Momotaro, companions, and enemies, then prompts user to choose an action. 
