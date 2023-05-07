@@ -5,7 +5,7 @@
  Authors: [Jemaima Roie Ceralde](https://github.com/jaeceralde), [Alice Lai](https://github.com/AliceLaiHK), [Lindsay Phan](https://github.com/lindsayphan), & [Eunice Wang](https://github.com/ewang117)
 
 ## Project Description
-_Momotaro: The Fight_ is a text-based role-playing game where the player embarks on a journey to defeat the darkness that is threatening to destroy their hometown. They play as Momotaro and are destined to meet 3 legendary animals — a dog, a monkey, and a bird — to aid them on their journey. Depending on their selected companion at a given time, they will be granted different abilities. Furthermore, they will be rewarded with rice cakes and green tea to help them gather their strength. Along the way, they will encounter onis to which they must defeat with the assistance of their legendary fauna through a series of battles. To win the game, the player must beat the final boss, the Demon King. There are two difficulties to choose from: normal (all items and abilities available) and hard (tougher enemies and no healing abilities), for those who like more of a challenge. 
+_Momotaro: The Fight_ is a text-based role-playing game where the player embarks on a journey to defeat the darkness that is threatening to destroy their hometown. They play as Momotaro and are destined to meet 3 legendary animals — a dog, a monkey, and a bird — to aid them on their journey. Depending on their selected companion at a given time, they will be granted different abilities. Furthermore, they will be rewarded with rice cakes and green tea to help them gather their strength. Along the way, they will encounter onis to which they must defeat with the assistance of their legendary faunas through a series of battles. To win the game, the player must beat the final boss, the Demon King. There are two difficulties to choose from: normal (all items and abilities available) and hard (tougher enemies and no healing abilities), for those who like more of a challenge. 
  
 Why is it important or interesting to you?
 * The group unanimously agreed to create a role-playing game for our final project because everyone in the group likes to play games and finds joy in the wonders of storytelling. Furthermore, we wanted to see what it would be like to be on the development side of gaming instead of just playing.
@@ -26,18 +26,6 @@ What are the features that the project provides?
  
 * The game has features such as three (3) different character types to choose from, multiple inventory items and attack abilities whose selection depends on the selected character, two (2) difficulty levels — normal and hard, access to character health and inventory items at user’s convenience, enemies to battle along the way, a boss to defeat to finish the game, and an option to restart the game once the player reaches the end (may that be through winning or losing).
  
- > 
- > ## Phase II
- > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
- > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Break down the "Epics" into smaller actionable user stories (i.e. smaller development tasks). Convert them into issues and assign them to team members. Place these in the `TODO` column.
- >   * These cards should represent roughly 7 days worth of development time for your team. Then, once the sprint is over you should be repeating these steps to plan a new sprint, taking you until your second scrum meeting with the reader in phase III.
- > * Schedule two check-ins using Calendly. You need to pick both time slots during your lab on week 6. Your entire team must be present for both check-ins.
- >   * The first check-in needs to be scheduled with your lab TA. During that meeting, you will discuss your project design/class diagram from phase II.
- >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
- >     * The tasks you are planning for the first sprint
- >     * How work will be divided between the team members
 ## User Interface Specification
 ### Navigation Diagram
 ![General Navigation Diagram](screencaps/GeneralNaviDiagram.jpg)
