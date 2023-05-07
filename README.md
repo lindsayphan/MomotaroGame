@@ -64,7 +64,8 @@ The game is entirely played in the terminal and will mainly use two screens: one
     ![Stats Screen ex](screencaps/stats_example.PNG)
 
 ## Class Diagram
- > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
+ ![UML Class Diagram](screencaps/UML%20Diagram.jpg)
+ The UML class diagram showcases the main classes that we will be using for our program. The Character class will have most of the data and will need to be accessed from other objects. It will contain the needed information the player will need in order to complete the game (i.e. health of the both the companions and Momotaro, stats, access to the items in their inventory, switching between their companions, etc.). The Momotaro class and the Inventory class share an aggregation relationship and the Character class and the Enemy class share a composition relationship.
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
