@@ -46,13 +46,22 @@ The diagram represents the general flow of the game. Between the storytelling, t
 The game is entirely played in the terminal and will mainly use two screens: one for the narrative/story parts and one for the combat/fighting parts. Additionally, there is an inventory, swap (companions), and stats screen. 
 * Narrative: outputs a description of the current setting/story beat, then prompts the user to make a decision. 
    - Expected input: 'YES' or 'NO' to progress the story, 'INVENTORY', 'SWAP', or 'STATS' to change companion or view information. 
+   
+   ![Narrative Screen ex](screencaps/narrative_screen_example.PNG)
 * Combat: outputs current health of Momotaro, companions, and enemies, then prompts user to choose an action. 
    - Expected input: 'ATTACK', 'DEFEND', 'HEAL' (only usable when selecting Momotaro's action), 'SWAP' (only usable when selecting companion's action), and 'STATS'.
+   
+   ![Combat Screen ex 2](screencaps/combat_screen_example_2.PNG)
 * Inventory: outputs list of items (and quantity of each item), then prompts user to select one.
     - Expected input: number corresponding to item or 'EXIT'.
+    
+    ![Inventory Screen ex](screencaps/inventory_example.PNG)
 * Swap: outputs available companions, then prompts user to choose one.
     - Expected input: 'DOG', 'MONKEY', 'BIRD', or 'EXIT'
+    
+    ![Swap Screen ex](screencaps/swap_example.PNG)
 * Stats: outputs the current health, attack, and defense stats of Momotaro and companions.
+    ![Stats Screen ex](screencaps/stats_example.PNG)
 
 ## Class Diagram
  > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
