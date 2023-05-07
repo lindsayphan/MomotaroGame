@@ -43,7 +43,16 @@ What are the features that the project provides?
 The diagram represents the general flow of the game. Between the storytelling, the player will be prompted to select amongst the displayed options. Depending on their choice, the story will proceed accordingly. A number of loops exist in the program, as depicted in the diagram linked above, because there is a circular pattern linking the story (of the game) and the actions (available for a vote) together.
 
 ### Screen Layouts
-> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
+The game is entirely played in the terminal and will mainly use two screens: one for the narrative/story parts and one for the combat/fighting parts. Additionally, there is an inventory, swap (companions), and stats screen. 
+* Narrative: outputs a description of the current setting/story beat, then prompts the user to make a decision. 
+   - Expected input: 'YES' or 'NO' to progress the story, 'INVENTORY', 'SWAP', or 'STATS' to change companion or view information. 
+* Combat: outputs current health of Momotaro, companions, and enemies, then prompts user to choose an action. 
+   - Expected input: 'ATTACK', 'DEFEND', 'HEAL' (only usable when selecting Momotaro's action), 'SWAP' (only usable when selecting companion's action), and 'STATS'.
+* Inventory: outputs list of items (and quantity of each item), then prompts user to select one.
+    - Expected input: number corresponding to item or 'EXIT'.
+* Swap: outputs available companions, then prompts user to choose one.
+    - Expected input: 'DOG', 'MONKEY', 'BIRD', or 'EXIT'
+* Stats: outputs the current health, attack, and defense stats of Momotaro and companions.
 
 ## Class Diagram
  > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
