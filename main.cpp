@@ -1,4 +1,7 @@
 #include <iostream>
+#include "../headers/character.hpp"
+using namespace std;
+
 
 int main() {
     // Backstory
