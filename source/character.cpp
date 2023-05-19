@@ -1,31 +1,38 @@
 #include <iostream>
 #include <string>
 #include "../headers/character.hpp"
+using namespace std;
 
-Character::Character(string _name, int _maxHp, int _atk, int _def) {
-    name = _name;
-    hp = _maxHP;
-    maxHp = _maxHP;
-    atk = _atk;
-    def = _def;
+Character::Character() {}
+
+Character::Character(string _name, int _maxHP, int _atk, int _def) {
+    this->name = _name;
+    this->hp = _maxHP;
+    this->maxHP = _maxHP;
+    this->atk = _atk;
+    this->def = _def;
 }
 
-virtual void Character::setHP(int value) {
-    hp = value;
+string Character::getName() const {
+    return this->name;
 }
 
-virtual int Character::getHP() const {
-    return hp;
+void Character::setHP(int value) {
+    this->hp = value;
 }
 
-virtual int Character::getMaxHP() const {
-    return maxHP;
+int Character::getHP() const {
+    return this->hp;
 }
 
-virtual int Character::getDefense() const {
-    return def;
+int Character::getMaxHP() const {
+    return this->maxHP;
 }
 
-virtual int Character::getAtack() const {
-    return atk;
+int Character::getDef() const {
+    return this->def;
+}
+
+int Character::getAtk() const {
+    return this->atk;
 }
