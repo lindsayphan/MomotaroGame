@@ -1,4 +1,5 @@
 #include <iostream>
+#include "character.hpp"
 
 int main() {
     // Backstory
