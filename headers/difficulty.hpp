@@ -2,16 +2,19 @@
 #define DIFFICULTY_HPP
 
 #include <iostream>
+#include <sstream>
 using namespace std;
 
 class Difficulty {
     private:
         int gameLvl;
+        stringstream in;
 
     public:
         Difficulty();
-        void setLvl();
-        int getLvl();
+        void promptForLvl();
+        void setLvl(stringstream &in);
+        int getLvl() const;
 };
 
 #endif
