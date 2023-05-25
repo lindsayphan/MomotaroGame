@@ -1,24 +1,24 @@
 #include <iostream>
-#include "../headers/character.hpp"
+// #include "../headers/character.hpp"
+#include "source/choices.cpp"
+#include "headers/choicesDog.hpp"
+#include "headers/choicesMonkey.hpp"
+#include "headers/choicesBird.hpp"
 using namespace std;
 
 
 int main() {
-    // Backstory
+    ChoicesDog meetDog;
+    meetDog.question();
+    meetDog.question();
 
-    // encounter dog
+    ChoicesMonkey meetMonkey;
+    meetMonkey.question();
+    meetMonkey.question();
 
-    // tutorial fight
-
-    // encounter monkey
-
-    // fight demon 1
-
-    // encounter bird
-    
-    // fight demon 2
-
-    // fight last boss
+    ChoicesBird meetBird;
+    meetBird.question();
+    meetBird.question();    
 
     return 0;
 }
