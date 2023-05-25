@@ -1,24 +1,30 @@
 #include <iostream>
-#include "../headers/character.hpp"
+// #include "../headers/character.hpp"
+#include "headers/difficulty.hpp"
+#include "headers/choices.hpp"
+#include "headers/choicesDog.hpp"
+#include "headers/choicesMonkey.hpp"
+#include "headers/choicesBird.hpp"
 using namespace std;
 
-
 int main() {
-    // Backstory
+    Difficulty level;
+    level.promptForLvl();
+  
+    ChoicesDog meetDog;
+    meetDog.saveGameLvl(level.getLvl());
+    meetDog.question();
+    meetDog.question();
 
-    // encounter dog
+    ChoicesMonkey meetMonkey;
+    meetMonkey.saveGameLvl(level.getLvl());
+    meetMonkey.question();
+    meetMonkey.question();
 
-    // tutorial fight
-
-    // encounter monkey
-
-    // fight demon 1
-
-    // encounter bird
-    
-    // fight demon 2
-
-    // fight last boss
+    ChoicesBird meetBird;
+    meetBird.saveGameLvl(level.getLvl());
+    meetBird.question();
+    meetBird.question();    
 
     return 0;
 }
