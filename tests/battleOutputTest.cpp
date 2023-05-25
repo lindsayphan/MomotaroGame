@@ -1,34 +1,4 @@
-// #include "../source/battleOutput.cpp"
 #include "../source/character.cpp"
-// using namespace std;
-
-// int main() {
-//     BattleOutput battle;
-//     Character* M = new Character("Momotaro",20,10,10);
-//     M->setHP(13);
-//     battle.printHealthBar(M->getName(), M->getHP(), M->getMaxHP());
-    
-//     return 0;
-// }
-
-/*void out(int color, int emphasis, string text) const;
-    void doubleLineBreak() const;
-    void singleLineBreak() const;
-    void printHealthBar(string name, int currHealth, int maxHealth) const;   */
-/* TEXT COLOR CODES
-        red         31
-        green       32
-        yellow      33
-        blue        34
-        purple      35
-        cyan        36
-        white       37
-
-        EMPHASIS CODES
-        bold        1
-        italics     3
-        underline   4
-        strikethrough 9 */
 #include "../source/battleOutput.cpp"
 #include "gtest/gtest.h"
 
@@ -44,7 +14,6 @@ TEST(battleOutputTest, testCustomText) {
 TEST(battleOutputTest, testFullHealthBar) {
     BattleOutput battle;
     Character* M = new Character("Momotaro",20,10,10);
-    // M->setHP(13);
     battle.printHealthBar(M->getName(), M->getHP(), M->getMaxHP());
 }
 
