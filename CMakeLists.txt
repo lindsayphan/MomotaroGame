@@ -3,7 +3,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 ADD_SUBDIRECTORY(tests/googletest)
 
 ADD_EXECUTABLE(test
-    tests/characterTest.cpp
+    tests/enemyTest.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
