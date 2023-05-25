@@ -46,3 +46,7 @@ void Choices::setAnswer(stringstream &in){
 char Choices::getAnswer() const {
     return this->chosenOne;
 }
+
+void Choices::saveGameLvl(int level) {
+    this->gameLvl = level;
+}

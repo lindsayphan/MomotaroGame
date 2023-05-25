@@ -35,6 +35,10 @@ void ChoicesBird::executeAnswer2() {
         cout << "BIRD: \"Since you're kind enough to offer me food… Perhaps I shall.\"" << endl << endl;
 
         // ADJUST AVAILABLE COMPANIONS
+
+        if (gameLvl == 1) {
+            // ADJUST BIRD HEALTH
+        }
     }
 
     else {

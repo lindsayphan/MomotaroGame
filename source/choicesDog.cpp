@@ -6,8 +6,8 @@
 using namespace std;
 
 ChoicesDog::ChoicesDog() {
-    answerPrompts.push_back("Do you offer it one? \'Y\' for yes or \'N\' for no.   ");
-    answerPrompts.push_back("Should you approach? \'Y\' for yes or \'N\' for no.   ");
+    answerPrompts.push_back("Do you offer it one?   ");
+    answerPrompts.push_back("Should you approach?   ");
 }
 
 void ChoicesDog::executeAnswer1() {
@@ -29,7 +29,9 @@ void ChoicesDog::executeAnswer2() {
 
         // ADJUST AVAILABLE COMPANIONS
         
-        // ADJUST DOG HEALTH
+        if (gameLvl == 1) {
+            // ADJUST DOG HEALTH
+        }
     }
 
     else {

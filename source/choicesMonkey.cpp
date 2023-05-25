@@ -6,8 +6,8 @@
 using namespace std;
 
 ChoicesMonkey::ChoicesMonkey() {
-    answerPrompts.push_back("Should you give it food? \'Y\' for yes or \'N\' for no.   ");
-    answerPrompts.push_back("Should you open your eyes? \'Y\' for yes or \'N\' for no.   ");
+    answerPrompts.push_back("Should you give it food?   ");
+    answerPrompts.push_back("Should you open your eyes?   ");
 }
 
 void ChoicesMonkey::executeAnswer1() {
@@ -31,7 +31,9 @@ void ChoicesMonkey::executeAnswer2() {
 
         // ADJUST AVAILABLE COMPANIONS
         
-        // ADJUST MONKEY HEALTH
+        if (gameLvl == 1) {
+            // ADJUST MONKEY HEALTH
+        }
     }
 
     else {
