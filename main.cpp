@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../headers/character.hpp"
+#include "../headers/battleOutput.hpp"
 using namespace std;
 
 
