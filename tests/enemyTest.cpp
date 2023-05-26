@@ -30,7 +30,15 @@ TEST(EnemyTest, TestHPEqual) {
 
 TEST(EnemyTest, checkAttackNoThrow) {
     Enemy *testEnemy5 = new Enemy("Boss5", 55, 60, 70);
-    EXPECT_NO_THROW(testEnemy5->attack());
+    Character *testOpponent = new Character("testOpponent1", 55, 60, 30);
+    EXPECT_NO_THROW(testEnemy5->attack(testOpponent));
+}
+
+TEST(EnemyTest, checkAttackChangeHP) {
+    Enemy *testEnemy6 = new Enemy("Boss6", 55, 35, 70);
+    Character *testOpponent = new Character("testOpponent2", 55, 60, 30);
+    testEnemy6->attack(testOpponent);
+    EXPECT_EQ(20, testOpponent->getHP());
 }
 
 int main(int argc, char **argv) {

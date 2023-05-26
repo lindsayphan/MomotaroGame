@@ -20,7 +20,7 @@ class Character {
     int getMaxHP() const;
     int getDef() const;
     int getAtk() const;
-    virtual void attack() = 0;
+    // virtual void attack() = 0;
 };
 
 #endif

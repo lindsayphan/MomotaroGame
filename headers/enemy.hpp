@@ -9,7 +9,7 @@ using namespace std;
 class Enemy: public Character {
   public: 
     Enemy(string _name, int _maxHP, int _atk, int _def);
-    void attack();
+    void attack(Character *);
   private:
 };
 
