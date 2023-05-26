@@ -1,6 +1,13 @@
 #include <iostream>
-#include "../headers/StoryDog.hpp"
+#include "../headers/choices.hpp"
+#include "../headers/choicesDog.hpp"
+#include "../headers/storyParts.hpp"
+#include "../headers/storyDog.hpp"
 using namespace std;
+
+void StoryDog::sendGameLvl(int level) {
+     meetDog.saveGameLvl(level);
+}
 
 void StoryDog::printNarrative() {
 
@@ -22,12 +29,12 @@ void StoryDog::printNarrative() {
 
     cout << "???: *BARK* *BARK*" << endl << endl;
 
-    // ChoicesIn1.Choice1();
+    meetDog.question();
 
     cout << "DOG: \"How dare you pass my field without asking permission first. "
          << "If you give me one of your rice cakes, I will let you go; otherwise, I will bite you 'til I kill you!\"" << endl << endl;
     
-    // ChoicesIn1.Choice2();
+    meetDog.question();
 
     cout << "Once you were ready, you resumed your journey — now with the dog following your trail. "
          << "At least, that was the plan until a dark ominous figure blocked your path." << endl

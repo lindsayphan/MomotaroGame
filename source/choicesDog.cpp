@@ -39,7 +39,7 @@ void ChoicesDog::executeAnswer2() {
     
         cout << "The dog's eyes suddenly widen, seemingly realizing who you are: The child born from a peach!" << endl << endl;
         
-        cout << "\"Oh, I apologize. I didn't recognize you!\"" << endl << endl;
+        cout << "DOG: \"Oh, I apologize. I didn't recognize you!\"" << endl << endl;
 
         cout << "YOU: \"I accept your apology. I haven't explored beyond my neighborhood before, thus it's reasonable for you to not know my face.\"" << endl << endl;
 

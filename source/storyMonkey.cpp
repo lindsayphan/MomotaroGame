@@ -1,6 +1,13 @@
 #include <iostream>
-#include "../headers/StoryMonkey.hpp"
+#include "../headers/choices.hpp"
+#include "../headers/choicesMonkey.hpp"
+#include "../headers/storyParts.hpp"
+#include "../headers/storyMonkey.hpp"
 using namespace std;
+
+void StoryMonkey::sendGameLvl(int level) {
+     meetMonkey.saveGameLvl(level);
+}
 
 void StoryMonkey::printNarrative() {
     
@@ -33,7 +40,7 @@ void StoryMonkey::printNarrative() {
 
     cout << "???: \"Son Goku!\"" << endl << endl;
 
-    // ChoicesIn2.Choice1();
+    meetMonkey.question();
 
     cout << "A curious pair of eyes looked back at you. The sparkle of excitement behind them ultimately faded as seconds ticked by," << endl
          << "presumably once their owner realized that you weren't who it initially thought you were." << endl << endl;
@@ -57,6 +64,25 @@ void StoryMonkey::printNarrative() {
     cout << "Before you can comment on the connection it made, you heard a stomach rumble." << endl
          << "The people that patched you and DOG up fed you both, so you knew the sound could not have been from yours." << endl << endl;
 
-    // ChoicesIn2.Choice2();
+    meetMonkey.question();
 
+    cout << "MONKEY: \"I'd be glad to. I can't just ignore the will of Son Goku, obviously.\"" << endl << endl;
+    
+    // ADJUST AVAILABLE COMPANIONS
+
+    cout << "You introduced MONKEY and DOG to each other once the latter was done drinking from the nearby river." << endl
+         << "They did not seem to like each other, but miraculously managed to keep their cool for the sake of a common cause." << endl << endl;
+
+     cout << "Before you could continue your journey again, however, the air around you suddenly felt colder." << endl
+          << "Not that you mind the sudden drop in temperature, since it would make your travel easier without the sun shining" << endl
+          << "fiercely upon you, but you knew the coldness of the air could not have been for a good reason." << endl << endl;
+
+     cout << "You did not want to turn your head, as you already had a feeling what exactly prompted the unusual change." << endl
+          << "Unfortunately, your eyes gravitated toward the source anyway — turning your head against your will." << endl << endl;
+     
+     cout << "And, sure enough, you locked eyes with a demon." << endl << endl;
+
+     cout << "A chill went down your spine as the demon's figure moved closer to where you were standing." << endl
+          << "Your fear was still there, but with both DOG and MONKEY next to you… you felt a little braver this time." << endl
+          << "As such, you barely even flinched when the demon bared its teeth threateningly before charging." << endl << endl;
 }
