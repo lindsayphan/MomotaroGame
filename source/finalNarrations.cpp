@@ -20,8 +20,8 @@ void FinalNarrations::meetDemonKing() {
 
     cout << "And then, once your heart was no longer trying to escape your chest, you stood up with a stronger resolve to finish what you started." << endl << endl;
 
-    cout << "Your team crossed the remaining terrain en route to the Demon King's lair. To better prepare you and your companions for the upcoming battle, you thought of ways to improve" << endl
-         << "your teamwork — which you immediately incorporated into your journey. And, akin to how it would have been in a montage," << endl
+    cout << "Your team crossed the remaining terrain en route to the Demon King's lair. To better prepare you and your companions for the upcoming battle," << endl
+         << "you thought of ways to improve your teamwork — which you immediately incorporated into your journey. And, akin to how it would have been in a montage," << endl
          << "your so-called \"teamwork training\" finished just in time for your team to lure out the Demon King out of his lair." << endl << endl;
 
     cout << "DEMON KING: \"Who dares to be in proximity of the Demon King?!\"" << endl << endl;

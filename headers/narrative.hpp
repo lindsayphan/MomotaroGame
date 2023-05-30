@@ -10,6 +10,7 @@
 #include "../headers/storyDog.hpp"
 #include "../headers/storyMonkey.hpp"
 #include "../headers/storyBird.hpp"
+#include "../headers/finalNarrations.hpp"
 using namespace std;
 
 class Narrative {
@@ -18,12 +19,13 @@ class Narrative {
         StoryDog companionDog;
         StoryMonkey companionMonkey;
         StoryBird companionBird;
+        FinalNarrations finalPages;
     public:
         Narrative();
         void beginning();
         void middle();
-        // void finale();
-        // void epilogue();
+        void finale();
+        void epilogue();
 };
 
 #endif

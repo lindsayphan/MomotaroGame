@@ -41,7 +41,7 @@ void StoryBird::printNarrative() {
 
     cout << "BIRD: \"What is your purpose for crossing these hills?\"" << endl << endl;
 
-    cout << "YOU: \"We're trying to reach the Demon's Lair located on the other side.\"" << endl << endl;
+    cout << "YOU: \"We're trying to reach the Demon's lair located on the other side.\"" << endl << endl;
 
     cout << "BIRD: \"Respectfully, but do you have a death wish?\"" << endl << endl;
 

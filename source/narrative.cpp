@@ -24,13 +24,10 @@ void Narrative::middle() {
     companionBird.printNarrative();
 }
 
-/* void Narrative::finale() {
-    // finalPages.sendGameLvl(level.getLvl());
-    // finalPages.printNarrative();
+void Narrative::finale() {
+    finalPages.meetDemonKing();
 }
-*/
 
-/* void Narrative::epilogue() {
-    // closing scenes
+void Narrative::epilogue() {
+    finalPages.epilogue();
 }
-*/

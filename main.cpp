@@ -5,7 +5,7 @@ using namespace std;
 
 // to compile in the terminal:
 // g++ main.cpp source/narrative.cpp source/choices.cpp source/choicesDog.cpp source/choicesMonkey.cpp source/choicesBird.cpp source/difficulty.cpp
-// source/storyDog.cpp source/storyMonkey.cpp source/storyBird.cpp -o narrative
+// source/storyDog.cpp source/storyMonkey.cpp source/storyBird.cpp source/finalNarrations.cpp -o narrative
 
 bool startOverPrompt();
 
@@ -13,7 +13,7 @@ int main() {
 
     while (true) {
         Narrative storyline;
-        bool battleLost = true;
+        bool battleLost = false;
         bool repeat = true;
 
         storyline.beginning();
@@ -24,23 +24,32 @@ int main() {
         if (battleLost == true) {
             repeat = startOverPrompt();
                 if (!repeat) {
+                    cout << "Thank you for playing!" << endl << endl;
                     return 1;
                     break;
                 }
         }
     
-        // storyline.finale();
+        storyline.finale();
         // FINAL BATTLE [battleLost = battle()];
-        // if (battleLost == true) {
-            // repeat = startOverPrompt();
-                // if (!repeat) {
-                    // return 1;
-                    // break;
-                // }
-        // }
+        if (battleLost == true) {
+            repeat = startOverPrompt();
+                if (!repeat) {
+                    cout << "Thank you for playing!" << endl << endl;
+                    return 1;
+                    break;
+                }
+        }
 
-        // storyline.epilogue();
+        storyline.epilogue();
+        repeat = startOverPrompt();
+            if (!repeat) {
+                cout << "Thank you for playing!" << endl << endl;
+                return 1;
+                break;
+            }
     }
+
     return 0;
 }
 
