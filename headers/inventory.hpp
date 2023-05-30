@@ -12,7 +12,7 @@ class Inventory {
   public:
     Inventory();
     void useItem(int listNum);
-    void addItem(int listNum);
+    void addItem(int listNum); 
 };
 
 #endif
