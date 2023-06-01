@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+#include "../headers/dog.hpp"
+using namespace std;
+
+Dog::Dog() {}
+
+Dog::Dog(string n, int health, int maxHealth, int attack, int defense) : Character(n, health, maxHealth, attack, defense) { }
+
+// void Dog::swap(string characterName) {
+    
+// }
+
+void Dog::defend(int enemyHP) {
+    int newAttack = enemyHP - this->def;
+    this->atk += newAttack;
+}
+
+void Dog::attack(Character *oni) {
+    int damage = (this->hp / this->maxHP) * this->atk;
+    int enemyHP = oni->getHP() - damage;
+
+    oni->setHP(enemyHP);
+    
+    cout << "+" << damage << " DAMAGE dealt to " << oni->getName() << endl;
+}
