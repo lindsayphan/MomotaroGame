@@ -3,6 +3,9 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 ADD_SUBDIRECTORY(tests/googletest)
 
 ADD_EXECUTABLE(test
+    # tests/characterTest.cpp
+    # tests/difficultyTest.cpp
+    tests/inventoryOutputTest.cpp
     tests/battleOutputTest.cpp
     tests/startOverTest.cpp
     tests/characterTest.cpp
