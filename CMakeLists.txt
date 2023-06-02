@@ -4,6 +4,10 @@ ADD_SUBDIRECTORY(tests/googletest)
 
 ADD_EXECUTABLE(test
     tests/battleOutputTest.cpp
+    tests/startOverTest.cpp
+    tests/characterTest.cpp
+    tests/momotaroTest.cpp
+    tests/difficultyTest.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
