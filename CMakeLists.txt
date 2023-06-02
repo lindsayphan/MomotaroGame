@@ -4,6 +4,9 @@ ADD_SUBDIRECTORY(tests/googletest)
 
 ADD_EXECUTABLE(test
     tests/enemyTest.cpp
+    tests/characterTest.cpp
+    tests/difficultyTest.cpp
+    tests/inventoryOutputTest.cpp
     tests/battleOutputTest.cpp
     tests/startOverTest.cpp
     tests/characterTest.cpp
