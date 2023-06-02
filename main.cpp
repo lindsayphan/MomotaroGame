@@ -1,6 +1,9 @@
 #include <iostream>
 #include <limits>
 #include "headers/narrative.hpp"
+#include "../headers/character.hpp"
+#include "../headers/battleOutput.hpp"
+#include "headers/difficulty.hpp"
 using namespace std;
 
 // to compile in the terminal:
