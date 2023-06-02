@@ -5,7 +5,13 @@ using namespace std;
 
 Monkey::Monkey() {}
 
-Monkey::Monkey(string n, int health, int maxHealth, int attack, int defense) : Character(n, health, maxHealth, attack, defense) { }
+Monkey::Monkey(string n, int health, int maxHealth, int attack, int defense) { 
+    this->name = n;
+    this->hp = health;
+    this->maxHP = maxHealth;
+    this->atk = attack;
+    this->def = defense;
+}
 
 // void Monkey::swap(string characterName) {
     

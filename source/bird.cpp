@@ -5,7 +5,13 @@ using namespace std;
 
 Bird::Bird() {}
 
-Bird::Bird(string n, int health, int maxHealth, int attack, int defense) : Character(n, health, maxHealth, attack, defense) { }
+Bird::Bird(string n, int health, int maxHealth, int attack, int defense) {
+    this->name = n;
+    this->hp = health;
+    this->maxHP = maxHealth;
+    this->atk = attack;
+    this->def = defense;
+}
 
 // void Bird::swap(string characterName) {
     
