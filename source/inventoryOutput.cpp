@@ -1,15 +1,19 @@
+#include <iostream>
+#include <iterator>
 #include "../headers/inventoryOutput.hpp"
-#include "../headers/item.hpp"
 using namespace std;
 
-void InventoryOutput::printInventory(vector<Item> inv) {
+void InventoryOutput::printInventory(list<Item*> inv) {
     cout << "============== INVENTORY ===============" << endl; 
-    for (int i = 0; i < inv.size(); i++) {
-        cout << i << ") ";
-        cout << inv.at(i).getName() << "\t";
-        cout << inv.at(i).getCount() << endl;
+    list<Item*>::iterator _iterator;
+    int placeCounter = 1;
+
+    for (_iterator = inv.begin(); _iterator != inv.end(); _iterator++) {
+        cout << placeCounter << ") ";
+        cout << (*_iterator)->getName() << "\t" << (*_iterator)->getCount() << endl;
+        placeCounter++;
     }
+        
     cout << "----------------------------------------" << endl;
-    cout  << "Select an item or 'EXIT' to exit: ";
-    cout << endl << "=========================================" << endl << endl;
+    cout  << "Type an item's name or type \'EXIT\' to exit: ";
 }

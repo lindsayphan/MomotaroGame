@@ -18,3 +18,11 @@ int Item::getHealthBoost() const {
 int Item::getCount() const {
     return count;
 }
+
+void Item::subtractCount() {
+    count -= 1;
+}
+
+void Item::addCount(int number) {
+    count += number;
+}

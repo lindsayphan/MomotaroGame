@@ -15,6 +15,8 @@ class Item {
     string getName() const;
     int getHealthBoost() const;
     int getCount() const;
+    void subtractCount();
+    void addCount(int number);
 };
 
 #endif
