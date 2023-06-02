@@ -1,5 +1,5 @@
-#ifndef CHARACTER_HPP
-#define CHARACTER_HPP
+#ifndef STARTOVER_HPP
+#define STARTOVER_HPP
 #include <iostream>
 #include <string>
 using namespace std;
