@@ -1,4 +1,6 @@
 #include <iostream>
+#include "../headers/character.hpp"
+#include "../headers/battleOutput.hpp"
 #include "headers/difficulty.hpp"
 using namespace std;
 
