@@ -8,6 +8,9 @@ ADD_EXECUTABLE(test
     tests/characterTest.cpp
     tests/momotaroTest.cpp
     tests/difficultyTest.cpp
+    tests/choicesDogTest.cpp
+    tests/choicesMonkeyTest.cpp
+    tests/choicesBirdTest.cpp
     tests/birdTest.cpp
     tests/dogTest.cpp
     tests/monkeyTest.cpp
