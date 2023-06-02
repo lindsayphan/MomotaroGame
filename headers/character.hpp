@@ -5,7 +5,7 @@
 using namespace std;
 
 class Character {
-  private:
+  protected:
     string name = "";
     int hp = 0;
     int maxHP = hp;
@@ -14,13 +14,13 @@ class Character {
   public:
     Character();
     Character(string _name, int _maxHP, int _atk, int _def);
-     string getName() const;
+    string getName() const;
     void setHP(int value);
     int getHP() const;
     int getMaxHP() const;
     int getDef() const;
     int getAtk() const;
-    virtual void attack(Character *) = 0;
+    //virtual void attack(Character *) = 0;
 };
 
 #endif
