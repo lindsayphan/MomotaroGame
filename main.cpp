@@ -1,24 +1,83 @@
 #include <iostream>
+#include <limits>
+#include "headers/narrative.hpp"
 #include "../headers/character.hpp"
+#include "../headers/battleOutput.hpp"
+#include "headers/difficulty.hpp"
 using namespace std;
 
+// to compile in the terminal:
+// g++ main.cpp source/narrative.cpp source/choices.cpp source/choicesDog.cpp source/choicesMonkey.cpp source/choicesBird.cpp source/difficulty.cpp
+// source/storyDog.cpp source/storyMonkey.cpp source/storyBird.cpp source/finalNarrations.cpp -o narrative
+
+bool startOverPrompt();
 
 int main() {
-    // Backstory
 
-    // encounter dog
+    while (true) {
+        Narrative storyline;
+        bool battleLost = false;
+        bool repeat = true;
 
-    // tutorial fight
+        storyline.beginning();
+        // BATTLE 1 [battleLost = battle()];
 
-    // encounter monkey
-
-    // fight demon 1
-
-    // encounter bird
+        storyline.middle();
+        // BATTLE 2 [battleLost = battle()];
+        if (battleLost == true) {
+            repeat = startOverPrompt();
+                if (!repeat) {
+                    cout << "Thank you for playing!" << endl << endl;
+                    return 1;
+                    break;
+                }
+        }
     
-    // fight demon 2
+        storyline.finale();
+        // FINAL BATTLE [battleLost = battle()];
+        if (battleLost == true) {
+            repeat = startOverPrompt();
+                if (!repeat) {
+                    cout << "Thank you for playing!" << endl << endl;
+                    return 1;
+                    break;
+                }
+        }
 
-    // fight last boss
+        storyline.epilogue();
+        repeat = startOverPrompt();
+            if (!repeat) {
+                cout << "Thank you for playing!" << endl << endl;
+                return 1;
+                break;
+            }
+    }
 
     return 0;
+}
+
+bool startOverPrompt() {
+    string answer;
+
+    cout << "Would you like to play again?   ";
+    cin >> answer;
+    answer = tolower(answer[0]);
+
+    while (!cin.good() || (answer[0] != 'y' && answer[0] != 'n')) {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "Would you like to play again?   ";
+        cin >> answer;
+        answer = tolower(answer[0]);
+    }
+
+    cout << endl;
+
+    if (answer[0] == 'y') {
+        return true;
+    }
+
+    else {
+        return false;
+    }
 }
