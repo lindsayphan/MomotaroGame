@@ -8,6 +8,9 @@ ADD_EXECUTABLE(test
     tests/characterTest.cpp
     tests/momotaroTest.cpp
     tests/difficultyTest.cpp
+    tests/birdTest.cpp
+    tests/dogTest.cpp
+    tests/monkeyTest.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
