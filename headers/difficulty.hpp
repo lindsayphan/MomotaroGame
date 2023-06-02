@@ -1,6 +1,5 @@
 #ifndef DIFFICULTY_HPP
 #define DIFFICULTY_HPP
-
 #include <iostream>
 #include <sstream>
 using namespace std;
