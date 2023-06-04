@@ -3,11 +3,10 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 ADD_SUBDIRECTORY(tests/googletest)
 
 ADD_EXECUTABLE(test
-    # tests/characterTest.cpp
-    # tests/difficultyTest.cpp
+    tests/characterTest.cpp
+    tests/difficultyTest.cpp
     tests/itemTest.cpp
     tests/inventoryTest.cpp
-    tests/inventoryOutputTest.cpp
     tests/battleOutputTest.cpp
     tests/startOverTest.cpp
     tests/characterTest.cpp
@@ -21,13 +20,13 @@ ADD_EXECUTABLE(test
     tests/monkeyTest.cpp
 )
 
-ADD_EXECUTABLE(inventory
-    main.cpp
-    source/item.cpp
-    source/inventory.cpp
-    source/inventoryOutput.cpp
-    source/inventoryMenu.cpp
-)
+# ADD_EXECUTABLE(inventory
+#     main.cpp
+#     source/item.cpp
+#     source/inventory.cpp
+#     source/inventoryOutput.cpp
+#     source/inventoryMenu.cpp
+# )
 
 
 TARGET_LINK_LIBRARIES(test gtest)
