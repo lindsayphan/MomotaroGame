@@ -1,4 +1,4 @@
-#include "../source/character.cpp"
+#include "../headers/character.hpp"
 #include "../source/battleOutput.cpp"
 #include "gtest/gtest.h"
 

@@ -1,8 +1,10 @@
 #include <iostream>
 #include <limits>
+#include "headers/inventory.hpp"
+#include "headers/inventoryMenu.hpp"
 #include "headers/narrative.hpp"
-#include "../headers/character.hpp"
-#include "../headers/battleOutput.hpp"
+#include "headers/character.hpp"
+#include "headers/battleOutput.hpp"
 #include "headers/difficulty.hpp"
 using namespace std;
 
@@ -13,6 +15,18 @@ using namespace std;
 bool startOverPrompt();
 
 int main() {
+    // Inventory _inventory;
+    // _inventory.addItem("poptart", 2, 1);
+    // _inventory.addItem("pretzel", 3, 3);
+    // _inventory.addItem("popcorn", 1, 1);
+
+    // InventoryMenu menu;
+    // menu.setInventory(&_inventory);
+    // menu.displayInventoryMenu();
+
+    // _inventory.addItem("pretzel", 3, 5);
+    // menu.setInventory(&_inventory);
+    // menu.displayInventoryMenu();
 
     while (true) {
         Narrative storyline;

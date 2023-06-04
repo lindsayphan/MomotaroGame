@@ -25,7 +25,7 @@ TEST(CharacterTest, TestHPEqual) {
     EXPECT_EQ(testCharacter->getMaxHP(), testCharacter->getHP());
 }
 
-int main(int argc, char **argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
-}
+// int main(int argc, char **argv) {
+//   ::testing::InitGoogleTest(&argc, argv);
+//   return RUN_ALL_TESTS();
+// }
