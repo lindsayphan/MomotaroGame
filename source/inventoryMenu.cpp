@@ -1,16 +1,22 @@
 #include <iostream>
 #include <limits>
+#include <algorithm>
 #include "../headers/inventoryMenu.hpp"
 using namespace std;
+
+void InventoryMenu::setInventory(Inventory* inv) {
+    _inventory = inv;
+}
 
 void InventoryMenu::displayInventoryMenu() {
     
     while (true) {
+        insideInventory = _inventory->getInventory();       // need to update insideInventory every display
         displayOutput.printInventory(insideInventory);
         string selected = validateAnswer();
 
         if (selected == "exit") {
-            cout << endl << "=========================================" << endl << endl;
+            cout << "=========================================" << endl << endl;
             break;
         }
 
@@ -22,42 +28,35 @@ void InventoryMenu::displayInventoryMenu() {
 
 string InventoryMenu::validateAnswer() {
     string answer = "input";
-    cin >> answer;
+    bool askAnswerAgain = true;
+    
+    getline(cin, answer);
+    transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
 
-    for (int place = 0; place < answer.size(); place++) {
-        answer = tolower(answer[place]);
-    }
+    while ((!cin.good()) || (askAnswerAgain == true)) {
 
-    bool lookForAnswer = false;
-
-    while (!cin.good() || (lookForAnswer == false) || (answer != "exit")) {
+        if (answer == "exit") {
+            askAnswerAgain = false;
+            return answer;
+        }
 
         for (list<Item*>::iterator _iterator = insideInventory.begin(); _iterator != insideInventory.end(); _iterator++) {
             if ((*_iterator)->getName() == answer) {
                 cout << "Selected " << answer;
-                lookForAnswer = true;
+                askAnswerAgain = false;
+                return answer;
             }
         }
 
         cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cout << "Type an item's name or type \'EXIT\' to exit: ";
-        cin >> answer;
-    
-        for (int place = 0; place < answer.size(); place++) {
-            answer = tolower(answer[place]);
-        }
+        getline(cin, answer);
+        transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
     }
-
-    cout << endl;
 
     return answer;
 }
 
-// void InventoryMenu::adjustInventory(string selectedItem) {
-//     _inventory.useItem(selectedItem);
-// }
-
-/*void InventoryMenu::setInventory(Inventory* inv) {
-    _inventory = inv;
-}*/
+void InventoryMenu::adjustInventory(string selectedItem) {
+    _inventory->useItem(selectedItem);
+}

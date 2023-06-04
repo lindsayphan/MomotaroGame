@@ -1,6 +1,5 @@
 #include <iostream>
 #include "headers/inventory.hpp"
-#include "headers/inventoryOutput.hpp"
 #include "headers/inventoryMenu.hpp"
 using namespace std;
 
@@ -13,17 +12,11 @@ int main() {
 
     InventoryMenu menu;
     menu.setInventory(&_inventory);
-    // menu.displayInventoryMenu();
+    menu.displayInventoryMenu();
 
-    InventoryOutput inventory_out;
-    inventory_out.printInventory(_inventory.getInventory());
-    
-    _inventory.useItem("popcorn");
     _inventory.addItem("pretzel", 3, 5);
-    inventory_out.printInventory(_inventory.getInventory());
-
-    _inventory.useItem("pretzel");
-    inventory_out.printInventory(_inventory.getInventory());
+    menu.setInventory(&_inventory);
+    menu.displayInventoryMenu();
 
     return 0;
 }
