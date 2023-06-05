@@ -18,6 +18,7 @@ ADD_EXECUTABLE(test
     tests/birdTest.cpp
     tests/dogTest.cpp
     tests/monkeyTest.cpp
+    tests/swapTest.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
