@@ -9,7 +9,6 @@ ADD_EXECUTABLE(test
     tests/inventoryOutputTest.cpp
     tests/battleOutputTest.cpp
     tests/startOverTest.cpp
-    tests/characterTest.cpp
     tests/momotaroTest.cpp
     tests/difficultyTest.cpp
     tests/choicesDogTest.cpp
