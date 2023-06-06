@@ -37,3 +37,11 @@ void Momotaro::attack(Character *oni) {
     
     cout << "+" << damage << " DAMAGE dealt to " << oni->getName() << endl;
 }
+
+void Momotaro::setAnimal(string animal) {
+    this->currAnimal = animal;
+}
+    
+string Momotaro::getAnimal() const {
+    return this->currAnimal;
+}
