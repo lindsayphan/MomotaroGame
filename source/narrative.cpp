@@ -12,16 +12,19 @@ Narrative::Narrative() {
 void Narrative::beginning() {
     companionDog.sendGameLvl(level.getLvl());
     companionDog.printNarrative();
+    // inGameInventory.displayInventoryMenu();
 
     // TUTORIAL BATTLE
 
     companionMonkey.sendGameLvl(level.getLvl());
     companionMonkey.printNarrative();
+    // inGameInventory.displayInventoryMenu();
 }
 
 void Narrative::middle() {
     companionBird.sendGameLvl(level.getLvl());
     companionBird.printNarrative();
+    // inGameInventory.displayInventoryMenu();
 }
 
 void Narrative::finale() {

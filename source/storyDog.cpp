@@ -1,7 +1,4 @@
 #include <iostream>
-#include "../headers/choices.hpp"
-#include "../headers/choicesDog.hpp"
-#include "../headers/storyParts.hpp"
 #include "../headers/storyDog.hpp"
 using namespace std;
 
@@ -18,8 +15,12 @@ void StoryDog::printNarrative() {
     cout << "Although your parents were not ecstatic with your decision to leave, they still sent you off with rice cakes and green tea for your trip." << endl << endl;
 
     cout << "FATHER: \"Take these with you.\"" << endl << endl;
+  
+    gameInventory->addItem("rice cakes", 0, 5);        // NEED TO FIX HEALTH BOOST
 
-    // ADJUST INVENTORY
+    if (meetDog.getLvl() == 1) {
+          gameInventory->addItem("green tea", 0, 5);        // NEED TO FIX HEALTH BOOST
+    } 
 
     cout << "You said thank you and goodbye to your parents before beginning your long journey." << endl << endl;
 

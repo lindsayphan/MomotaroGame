@@ -50,3 +50,7 @@ char Choices::getAnswer() const {
 void Choices::saveGameLvl(int level) {
     this->gameLvl = level;
 }
+
+int Choices::getLvl() const {
+    return this->gameLvl;
+}

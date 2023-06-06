@@ -1,32 +1,13 @@
 #include <iostream>
 #include <limits>
-#include "headers/inventory.hpp"
-#include "headers/inventoryMenu.hpp"
 #include "headers/narrative.hpp"
-#include "headers/character.hpp"
-#include "headers/battleOutput.hpp"
-#include "headers/difficulty.hpp"
 using namespace std;
 
-// to compile in the terminal:
-// g++ main.cpp source/narrative.cpp source/choices.cpp source/choicesDog.cpp source/choicesMonkey.cpp source/choicesBird.cpp source/difficulty.cpp
-// source/storyDog.cpp source/storyMonkey.cpp source/storyBird.cpp source/finalNarrations.cpp -o narrative
+Inventory* gameInventory = new Inventory();
 
 bool startOverPrompt();
 
 int main() {
-    // Inventory _inventory;
-    // _inventory.addItem("poptart", 2, 1);
-    // _inventory.addItem("pretzel", 3, 3);
-    // _inventory.addItem("popcorn", 1, 1);
-
-    // InventoryMenu menu;
-    // menu.setInventory(&_inventory);
-    // menu.displayInventoryMenu();
-
-    // _inventory.addItem("pretzel", 3, 5);
-    // menu.setInventory(&_inventory);
-    // menu.displayInventoryMenu();
 
     while (true) {
         Narrative storyline;
@@ -65,6 +46,8 @@ int main() {
                 return 1;
                 break;
             }
+    
+        gameInventory->deleteInventory();
     }
 
     return 0;

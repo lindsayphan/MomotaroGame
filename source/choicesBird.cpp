@@ -28,7 +28,8 @@ void ChoicesBird::executeAnswer1() {
 
 void ChoicesBird::executeAnswer2() {
         if (getAnswer() == 'y') {
-        // ADJUST INVENTORY
+            
+        gameInventory->useItem("rice cakes");
 
         cout << "YOU: \"Would you be interested in finding out for yourself, then?\"" << endl << endl;
 

@@ -11,6 +11,7 @@
 #include "../headers/storyMonkey.hpp"
 #include "../headers/storyBird.hpp"
 #include "../headers/finalNarrations.hpp"
+#include "../headers/inventoryMenu.hpp"
 using namespace std;
 
 class Narrative {
@@ -20,6 +21,7 @@ class Narrative {
         StoryMonkey companionMonkey;
         StoryBird companionBird;
         FinalNarrations finalPages;
+        InventoryMenu inGameInventory;
     public:
         Narrative();
         void beginning();

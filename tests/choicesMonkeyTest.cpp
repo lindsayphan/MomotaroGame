@@ -1,6 +1,7 @@
 #include <sstream>
 #include "../source/choicesMonkey.cpp"
 #include "../headers/choices.hpp"
+#include "../headers/inventory.hpp"
 #include "gtest/gtest.h"
 
 TEST(ChoicesMonkeyTest, testGetAnswer1) {

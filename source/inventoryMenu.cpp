@@ -4,14 +4,14 @@
 #include "../headers/inventoryMenu.hpp"
 using namespace std;
 
-void InventoryMenu::setInventory(Inventory* inv) {
-    _inventory = inv;
-}
+// void InventoryMenu::setInventory(Inventory* inv) {
+//     _inventory = inv;
+// }
 
 void InventoryMenu::displayInventoryMenu() {
     
     while (true) {
-        insideInventory = _inventory->getInventory();       // need to update insideInventory every display
+        insideInventory = gameInventory->getInventory();       // need to update insideInventory every display
         displayOutput.printInventory(insideInventory);
         string selected = validateAnswer();
 
@@ -22,13 +22,21 @@ void InventoryMenu::displayInventoryMenu() {
 
         else {
             adjustInventory(selected);
+            iterations++;
         }
     }
+
+    iterations = 0;
 }
 
 string InventoryMenu::validateAnswer() {
-    string answer = "input";
+    string answer;
     bool askAnswerAgain = true;
+
+    cin.clear();
+    if (iterations == 0) {
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
     
     getline(cin, answer);
     transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
@@ -42,21 +50,24 @@ string InventoryMenu::validateAnswer() {
 
         for (list<Item*>::iterator _iterator = insideInventory.begin(); _iterator != insideInventory.end(); _iterator++) {
             if ((*_iterator)->getName() == answer) {
-                cout << "Selected " << answer;
+                cout << endl << "Selected " << answer << endl << endl;
                 askAnswerAgain = false;
                 return answer;
             }
         }
 
-        cin.clear();
-        cout << "Type an item's name or type \'EXIT\' to exit: ";
-        getline(cin, answer);
-        transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
+        if (askAnswerAgain == true) {
+            cin.clear();
+            // cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Type an item's name or type \'EXIT\' to exit: ";
+            getline(cin, answer);
+            transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
+        } 
     }
 
     return answer;
 }
 
 void InventoryMenu::adjustInventory(string selectedItem) {
-    _inventory->useItem(selectedItem);
+    gameInventory->useItem(selectedItem);
 }

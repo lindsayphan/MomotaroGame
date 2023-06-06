@@ -2,7 +2,10 @@
 #define STORYPARTS_HPP
 #include <iostream>
 #include <sstream>
+#include "../headers/inventory.hpp"
 using namespace std;
+
+extern Inventory* gameInventory;
 
 class StoryParts {
     protected:

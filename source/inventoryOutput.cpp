@@ -15,5 +15,5 @@ void InventoryOutput::printInventory(list<Item*> inv) {
     }
         
     cout << "----------------------------------------" << endl;
-    cout  << "Type an item's name or type \'EXIT\' to exit: ";
+    cout << "Type an item's name or type \'EXIT\' to exit: ";
 }

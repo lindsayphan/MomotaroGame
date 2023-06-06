@@ -3,7 +3,7 @@
 using namespace std;
 
 list<Item*> Inventory::getInventory() const {
-    return inventory;
+    return this->inventory;
 }
 
 bool Inventory::alreadyHave(string itemName) {
@@ -68,3 +68,8 @@ void Inventory::useItem(string itemName) {
     } 
 }
 
+void Inventory::deleteInventory() {
+    for (list<Item*>::iterator _iterator = inventory.begin(); _iterator != inventory.end(); ) {
+        _iterator = inventory.erase(_iterator);
+    }
+}
