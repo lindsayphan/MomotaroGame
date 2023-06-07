@@ -1,9 +1,9 @@
 #include "../source/statsOutput.cpp"
-#include "../source/character.cpp"
-#include "../source/momotaro.cpp"
-#include "../source/monkey.cpp"
-#include "../source/dog.cpp"
-#include "../source/bird.cpp"
+#include "../headers/character.hpp"
+#include "../headers/momotaro.hpp"
+#include "../headers/monkey.hpp"
+#include "../headers/dog.hpp"
+#include "../headers/bird.hpp"
 #include "gtest/gtest.h"
 #include <vector>
 
@@ -27,7 +27,7 @@ TEST(statsOutputTest, printStatslessHealth) {
     statsOut.printStats(testMomotaro, testDog, testMonkey, testBird);
 }
 
-int main(int argc, char **argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
-}
+// int main(int argc, char **argv) {
+//   ::testing::InitGoogleTest(&argc, argv);
+//   return RUN_ALL_TESTS();
+// }

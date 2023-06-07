@@ -1,8 +1,8 @@
 #include "../source/swap.cpp"
-#include "../source/dog.cpp"
-#include "../source/monkey.cpp"
-#include "../source/bird.cpp"
-#include "../source/character.cpp"
+#include "../headers/dog.hpp"
+#include "../headers/monkey.hpp"
+#include "../headers/bird.hpp"
+#include "../headers/character.hpp"
 #include "gtest/gtest.h"
 
 using namespace std;
@@ -163,7 +163,7 @@ TEST(swapTest, swapBirdBird) {
     EXPECT_EQ('b', testSwap.swapGetCurrentAnimal());
 }
 
-int main(int argc, char **argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
-}
+// int main(int argc, char **argv) {
+//   ::testing::InitGoogleTest(&argc, argv);
+//   return RUN_ALL_TESTS();
+// }
