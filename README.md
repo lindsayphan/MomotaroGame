@@ -5,8 +5,8 @@
  Authors: [Jemaima Roie Ceralde](https://github.com/jaeceralde), [Alice Lai](https://github.com/AliceLaiHK), [Lindsay Phan](https://github.com/lindsayphan), & [Eunice Wang](https://github.com/ewang117)
 
 ## Project Description
-_Momotaro: The Fight_ is a text-based role-playing game where the player embarks on a journey to defeat the darkness that is threatening to destroy their hometown. They play as Momotaro and are destined to meet 3 legendary animals — a dog, a monkey, and a bird — to aid them on their journey. Depending on their selected companion at a given time, they will be granted different abilities. Furthermore, they will be rewarded with rice cakes and green tea to help them gather their strength. Along the way, they will encounter onis to which they must defeat with the assistance of their legendary faunas through a series of battles. To win the game, the player must beat the final boss, the Demon King. There are two difficulties to choose from: normal (all items and abilities available) and hard (tougher enemies and no healing abilities), for those who like more of a challenge. 
- 
+_Momotaro: The Fight_ is a text-based role-playing game where the player embarks on a journey to defeat the darkness that is threatening to destroy their hometown. They play as Momotaro and are destined to meet 3 legendary animals — a dog, a monkey, and a bird — to aid them on their journey. Along the way, they will be rewarded with rice cakes and green tea to help them gather their strength. Furthermore, they will encounter onis to which they must defeat with the assistance of their legendary faunas through a series of battles. During those fights, they can switch companions after each attack to maximize their chance at survival. To win the game, the player must beat the final boss, the Demon King. There are two difficulties to choose from: normal (both rice cakes and green tea power-ups are available) and hard (just rice cakes are available), for those who like more of a challenge. 
+
 Why is it important or interesting to you?
 * The group unanimously agreed to create a role-playing game for our final project because everyone in the group likes to play games and finds joy in the wonders of storytelling. Furthermore, we wanted to see what it would be like to be on the development side of gaming instead of just playing.
  
@@ -17,14 +17,16 @@ What languages/tools/technologies do you plan to use? (This list may change over
     - _GitHub_ to store everyone’s work/contribution in one place  
     - _[creately.com](creately.com)_ to create the user navigation diagram 
     - _[diagrams.net](diagrams.net)_ to create the class diagram
+    - _Google Test (gtest)_ to write unit tests for eligible functions
+    - _Valgrind_ to check for memory leaks
  
 What will be the input/output of your project?
-* The project will ask the user/player to choose between options concerning the action they want. For example, the options might include — but are not limited to: Which companion would you like to have? How do you want to attack? What items would you like to use?
-Depending on the choice made by the user, the corresponding action will be taken and displayed — as well as the consequences that follow the chosen option. Additionally, the player prompts (mentioned above) will be displayed on the screen for the user to read.
+* The project will ask the user/player to choose between options concerning the action they want. For example, the options might include — but are not limited to: Which companion would you like to battle alongside? What would you like to do? What items would you like to use?
+Depending on the choice made by the user, the corresponding action will be taken and displayed — as well as the consequences that follow the chosen option. Additionally, the player prompts (mentioned above, although more succinctly put) will be displayed on the screen for the user to read.
 
 What are the features that the project provides?
  
-* The game has features such as three (3) different character types to choose from, multiple inventory items and attack abilities whose selection depends on the selected character, two (2) difficulty levels — normal and hard, access to character health and inventory items at user’s convenience, enemies to battle along the way, a boss to defeat to finish the game, and an option to restart the game once the player reaches the end (may that be through winning or losing).
+* The game has features such as three (3) different character types to choose from, multiple inventory items, two (2) difficulty levels — normal and hard, access to character health and inventory items at user’s convenience, enemies to battle along the way, a boss to defeat to finish the game, and an option to restart the game once the player reaches the end (may that be through winning or losing).
  
 ## User Interface Specification
 ### Navigation Diagram
@@ -63,15 +65,15 @@ The game is entirely played in the terminal and will mainly use two screens: one
  The StoryParts class is an abstract class that StoryDog, StoryMonkey, and StoryBird inherit from. The Story(animal) classes hold narratives of what happens when Momotaro meets the specified animal (i.e. how they meet and any necessary dialogue). When the function printNarrative() is called, it calls on Choices(animal), through the meet(animal) variable, to further the story depending on the user choice. The Choices(animal) classes depend on the health and inventory classes because each choice the user makes during their encounters with the animals affects either the health or inventory classes. The Choices(animal) classes also depend on the specified character class because the user will not have any access to that animal until it has joined Momotaro’s party. The Story(animal) classes depend on the designated Choices(animal) class. 
  
  > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
+ > All group members will give a demo to the reader during lab time. You should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
  > Before the demo, you should do the following:
  > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
- ## Screenshots
+## Screenshots
  > Screenshots of the input/output after running your application
- ## Installation/Usage
- > Instructions on installing and running your application
- ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+## Installation/Usage
+Installing this project requires cloning a copy of this GitHub repository into an IDE of choice or just a computer's command line, as long as it supports C++ programming. Once the repository has been cloned, in the terminal/command line, type _FINISH INSTRUCTIONS!_
+## Testing
+This project was tested through _Google Test (gtest)_, as all developers practiced test-driven design. Unfortunately, not all classes/functions that exist within this program were eligible for such tests — specifically those that were meant to output in the terminal since this is, after all, a terminal-based RPG. Thus, to test the functionality of output calls, the program was also ran in the terminal countless times throughout the entire production. Furthermore, _Valgrind_ was utilized to eliminate potential memory leaks.
