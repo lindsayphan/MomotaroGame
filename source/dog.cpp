@@ -3,19 +3,13 @@
 #include "../headers/dog.hpp"
 using namespace std;
 
-Dog::Dog() {}
-
-Dog::Dog(string n, int health, int maxHealth, int attack, int defense) { 
-    this->name = n;
-    this->hp = health;
-    this->maxHP = maxHealth;
-    this->atk = attack;
-    this->def = defense;
+Dog::Dog() {
+    name = "DOG";
+    hp = 10;
+    maxHP = 10;
+    atk = 5;
+    def = 5;
 }
-
-// void Dog::swap(string characterName) {
-    
-// }
 
 void Dog::defend(int enemyHP) {
     int newAttack = enemyHP - this->def;

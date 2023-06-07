@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../headers/battleOutput.hpp"
+#include "../headers/battle.hpp"
 #include <string>
 using namespace std;
 

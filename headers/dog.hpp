@@ -8,8 +8,7 @@ using namespace std;
 class Dog: public Character {
   public:
     Dog();
-    Dog(string n, int health, int maxHealth, int attack, int defense);
-    // void swap(string characterName);
+    Dog(string _name, int _maxHP, int _atk, int _def) : Character(_name, _maxHP, _atk, _def) {}
     void defend(int enemyHP);
     void attack(Character *oni);
 };

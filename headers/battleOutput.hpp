@@ -1,5 +1,6 @@
 #ifndef BATTLEOUTPUT_HPP
 #define BATTLEOUTPUT_HPP
+#include "battle.hpp"
 #include <string>
 using namespace std;
 
