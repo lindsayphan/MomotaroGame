@@ -9,11 +9,11 @@ void BattleOutput::out(int color, int emphasis, string text) const {
 }
 
 void BattleOutput::doubleLineBreak() const {
-    cout << endl << "==============================================================" << endl;
+    cout << "==============================================================" << endl;
 }
 
 void BattleOutput::singleLineBreak() const {
-    cout << endl << "--------------------------------------------------------------" << endl;
+    cout << "--------------------------------------------------------------" << endl;
 }
 
 void BattleOutput::printHealthBar(string name, int currHealth, int maxHealth) const {

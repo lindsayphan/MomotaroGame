@@ -8,7 +8,7 @@ using namespace std;
 
 class Battle {
   public:
-    void damageDealt(Momotaro *d_momotaro, Character *d_companion, Enemy *d_enemy);
+    int damageDealt(Momotaro *d_momotaro, Character *d_companion, Enemy *d_enemy);
     void damageTaken(Momotaro *d_momotaro, Character *d_companion, Enemy *d_enemy);
 };
 

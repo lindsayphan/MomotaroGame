@@ -3,21 +3,20 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 ADD_SUBDIRECTORY(tests/googletest)
 
 ADD_EXECUTABLE(test
-    tests/enemyTest.cpp
     tests/characterTest.cpp
-    tests/difficultyTest.cpp
-    # tests/inventoryOutputTest.cpp     // being worked on?
-    tests/battleOutputTest.cpp
-    tests/startOverTest.cpp
     tests/momotaroTest.cpp
-    tests/difficultyTest.cpp
-    tests/choicesDogTest.cpp
-    tests/choicesMonkeyTest.cpp
-    tests/choicesBirdTest.cpp
-    tests/birdTest.cpp
     tests/dogTest.cpp
     tests/monkeyTest.cpp
-    tests/swapTest.cpp
+    tests/birdTest.cpp
+    tests/enemyTest.cpp
+    # tests/choicesDogTest.cpp
+    # tests/choicesMonkeyTest.cpp
+    # tests/choicesBirdTest.cpp
+    # tests/difficultyTest.cpp
+    # # tests/inventoryOutputTest.cpp     // being worked on?
+    # tests/startOverTest.cpp
+    # tests/swapTest.cpp
+    tests/battleOutputTest.cpp
     tests/battleTest.cpp
 )
 
