@@ -2,21 +2,19 @@
 #include "../headers/inventory.hpp"
 using namespace std;
 
-// g++ -g -O0 main.cpp source/difficulty.cpp source/narrative.cpp source/choices.cpp source/choicesDog.cpp source/choicesMonkey.cpp source/choicesBird.cpp source/storyDog.cpp source/storyMonkey.cpp source/storyBird.cpp source/finalNarrations.cpp source/item.cpp source/inventory.cpp source/inventoryMenu.cpp source/inventoryOutput.cpp -o narrative
-// ./narrative
-// valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all ./narrative
-
 Inventory::~Inventory() {
-    // for (int i = 0; i < inventory.size(); ++i) {
-    //     delete inventory[];
-    // }
-}
-
-void Inventory::deleteInventory() {
+    
     for (list<Item*>::iterator _iterator = inventory.begin(); _iterator != inventory.end(); ) {
+        delete *_iterator;
         _iterator = inventory.erase(_iterator);
     }
 }
+
+// void Inventory::deleteInventory() {
+//     for (list<Item*>::iterator _iterator = inventory.begin(); _iterator != inventory.end(); ) {
+//         _iterator = inventory.erase(_iterator);
+//     }
+// }
 
 list<Item*> Inventory::getInventory() const {
     return this->inventory;
@@ -76,6 +74,7 @@ void Inventory::useItem(string itemName) {
             if ((*_iterator)->getCount() == 0) {
                 placeCounter--;
                 advance(_placeHolder, placeCounter);
+                delete *_placeHolder;
                 _iterator = inventory.erase(_placeHolder);
             }
 

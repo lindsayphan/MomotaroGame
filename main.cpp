@@ -9,7 +9,9 @@ bool startOverPrompt();
 
 int main() {
 
-    while (true) {
+    bool gameIsPlaying = true;
+
+    while (gameIsPlaying) {
         Narrative storyline;
         bool battleLost = false;
         bool repeat = true;
@@ -23,8 +25,8 @@ int main() {
             repeat = startOverPrompt();
                 if (!repeat) {
                     cout << "Thank you for playing!" << endl << endl;
-                    return 1;
-                    break;
+                    gameIsPlaying = false;
+                    continue;
                 }
         }
     
@@ -34,8 +36,8 @@ int main() {
             repeat = startOverPrompt();
                 if (!repeat) {
                     cout << "Thank you for playing!" << endl << endl;
-                    return 1;
-                    break;
+                    gameIsPlaying = false;
+                    continue;
                 }
         }
 
@@ -43,13 +45,17 @@ int main() {
         repeat = startOverPrompt();
             if (!repeat) {
                 cout << "Thank you for playing!" << endl << endl;
-                return 1;
-                break;
+                gameIsPlaying = false;
+                continue;
             }
     
-        gameInventory->deleteInventory();
+        delete gameInventory;
+        gameInventory = new Inventory();
+        // gameInventory->deleteInventory();
     }
-
+    
+    delete gameInventory;
+    
     return 0;
 }
 
