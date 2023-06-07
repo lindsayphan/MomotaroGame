@@ -1,8 +1,8 @@
 #include "../source/swap.cpp"
-#include "../source/dog.cpp"
-#include "../source/monkey.cpp"
-#include "../source/bird.cpp"
-#include "../source/character.cpp"
+#include "../headers/dog.hpp"
+#include "../headers/monkey.hpp"
+#include "../headers/bird.hpp"
+#include "../headers/character.hpp"
 #include "gtest/gtest.h"
 
 using namespace std;
@@ -35,33 +35,36 @@ TEST(swapTest, swapSetAnswerb) {
 
 TEST(swapTest, swapPropmtNoThrow) {
     Swap testSwap;
-    Dog *testDog = new Dog("Dog", 10, 10, 5, 5);
-    Monkey *testMonkey = new Monkey("Monkey", 10, 10, 7, 3);
-    Bird *testBird = new Bird("Bird", 10, 10, 3, 3);
+    Dog *testDog = new Dog("Dog", 10, 5, 5);
+    Monkey *testMonkey = new Monkey("Monkey", 10, 7, 3);
+    Bird *testBird = new Bird("Bird", 10, 3, 3);
     EXPECT_NO_THROW(testSwap.swapChoicePrompt(testDog, testMonkey, testBird));
 }
 
 TEST(swapTest, propmtNoDog) {
     Swap testSwap;
-    Dog *testDog = new Dog("Dog", 0, 10, 5, 5);
-    Monkey *testMonkey = new Monkey("Monkey", 10, 10, 7, 3);
-    Bird *testBird = new Bird("Bird", 10, 10, 3, 3);
+    Dog *testDog = new Dog();
+    testDog->setHP(0);
+    Monkey *testMonkey = new Monkey("Monkey", 10, 7, 3);
+    Bird *testBird = new Bird("Bird", 10, 3, 3);
     EXPECT_NO_THROW(testSwap.swapChoicePrompt(testDog, testMonkey, testBird));
 }
 
 TEST(swapTest, propmtNoMonkey) {
     Swap testSwap;
-    Dog *testDog = new Dog("Dog", 10, 10, 5, 5);
-    Monkey *testMonkey = new Monkey("Monkey", 0, 10, 7, 3);
-    Bird *testBird = new Bird("Bird", 10, 10, 3, 3);
+    Dog *testDog = new Dog("Dog", 10, 5, 5);
+    Monkey *testMonkey = new Monkey("Monkey", 10, 7, 3);
+    testMonkey->setHP(0);
+    Bird *testBird = new Bird("Bird", 10, 3, 3);
     EXPECT_NO_THROW(testSwap.swapChoicePrompt(testDog, testMonkey, testBird));
 }
 
 TEST(swapTest, propmtNoBird) {
     Swap testSwap;
-    Dog *testDog = new Dog("Dog", 10, 10, 5, 5);
-    Monkey *testMonkey = new Monkey("Monkey", 10, 10, 7, 3);
-    Bird *testBird = new Bird("Bird", 0, 10, 3, 3);
+    Dog *testDog = new Dog("Dog", 10, 5, 5);
+    Monkey *testMonkey = new Monkey("Monkey", 10, 7, 3);
+    Bird *testBird = new Bird("Bird", 10, 3, 3);
+    testBird->setHP(0);
     EXPECT_NO_THROW(testSwap.swapChoicePrompt(testDog, testMonkey, testBird));
 }
 
@@ -161,9 +164,4 @@ TEST(swapTest, swapBirdBird) {
     testSwap.swapSetAnswer('b');
     testSwap.swapAnimals(testSwap.swapGetCurrentAnimal(), testSwap.swapGetAnswer());
     EXPECT_EQ('b', testSwap.swapGetCurrentAnimal());
-}
-
-int main(int argc, char **argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
 }

@@ -1,4 +1,3 @@
-#include "../source/character.cpp"
 #include "../source/battleOutput.cpp"
 #include "gtest/gtest.h"
 
@@ -43,9 +42,4 @@ TEST(battleOutputTest, testZeroHealthBar) {
     Character* M = new Character("Momotaro",20,10,10);
     M->setHP(0);
     battle.printHealthBar(M->getName(), M->getHP(), M->getMaxHP());
-}
-
-int main(int argc, char **argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
 }

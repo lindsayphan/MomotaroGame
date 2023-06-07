@@ -1,4 +1,5 @@
 #include "../source/dog.cpp"
+#include "../headers/character.hpp"
 #include "gtest/gtest.h"
 
 TEST(DogTest, constructorTest) {

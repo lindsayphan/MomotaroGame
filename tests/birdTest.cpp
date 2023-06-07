@@ -1,6 +1,5 @@
 #include "../source/bird.cpp"
-#include "../source/character.cpp"
-
+#include "../headers/character.hpp"
 #include "gtest/gtest.h"
 
 TEST(BirdTest, constructorTest) {
@@ -55,9 +54,4 @@ TEST(BirdTest, testAttack2) {
     Character *enemy = new Character("ONI", 30, 5, 0);
     b->attack(enemy);
     EXPECT_EQ(27, enemy->getHP());
-}
-
-int main(int argc, char **argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
 }

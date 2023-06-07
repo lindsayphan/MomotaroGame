@@ -1,5 +1,5 @@
+#include "../headers/character.hpp"
 #include "../source/enemy.cpp"
-#include "../source/character.cpp"
 #include "gtest/gtest.h"
 
 using namespace std;
@@ -39,9 +39,4 @@ TEST(EnemyTest, checkAttackChangeHP) {
     Character *testOpponent = new Character("testOpponent2", 55, 60, 30);
     testEnemy6->attack(testOpponent);
     EXPECT_EQ(20, testOpponent->getHP());
-}
-
-int main(int argc, char **argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
 }

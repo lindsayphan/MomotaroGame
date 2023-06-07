@@ -1,4 +1,5 @@
 #include "../source/monkey.cpp"
+#include "../headers/character.hpp"
 #include "gtest/gtest.h"
 
 TEST(MonkeyTest, constructorTest) {

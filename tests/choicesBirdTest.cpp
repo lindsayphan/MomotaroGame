@@ -1,6 +1,6 @@
 #include <sstream>
-#include "../source/choicesBird.cpp"
 #include "../headers/choices.hpp"
+#include "../source/choicesBird.cpp"
 #include "gtest/gtest.h"
 
 TEST(ChoicesBirdTest, testGetAnswer1) {

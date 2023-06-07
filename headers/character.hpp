@@ -6,11 +6,11 @@ using namespace std;
 
 class Character {
   protected:
-    string name = "";
-    int hp = 0;
-    int maxHP = hp;
-    int atk = 0;
-    int def = 0;
+    string name;
+    int hp;
+    int maxHP;
+    int atk;
+    int def;
   public:
     Character();
     Character(string _name, int _maxHP, int _atk, int _def);

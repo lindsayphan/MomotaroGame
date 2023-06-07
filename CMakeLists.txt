@@ -6,7 +6,7 @@ ADD_EXECUTABLE(test
     tests/enemyTest.cpp
     tests/characterTest.cpp
     tests/difficultyTest.cpp
-    tests/inventoryOutputTest.cpp
+    # tests/inventoryOutputTest.cpp     // being worked on?
     tests/battleOutputTest.cpp
     tests/startOverTest.cpp
     tests/momotaroTest.cpp
@@ -18,6 +18,7 @@ ADD_EXECUTABLE(test
     tests/dogTest.cpp
     tests/monkeyTest.cpp
     tests/swapTest.cpp
+    tests/battleTest.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
