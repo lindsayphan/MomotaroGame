@@ -11,11 +11,12 @@ class Inventory {
     list<Item*> inventory;
     list<Item*>::iterator _iterator;
   public:
+    ~Inventory();
+    void deleteInventory();
     list<Item*> getInventory() const;
     bool alreadyHave(string itemName);
-    void addItem(string itemName, int healthBoost, int itemCount);
+    void addItem(string itemName, int itemCount);
     void useItem(string itemName);
-    void deleteInventory();
      
 };
 

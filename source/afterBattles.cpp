@@ -2,14 +2,6 @@
 #include "../headers/afterBattles.hpp"
 using namespace std;
 
-void AfterBattles::getInventory(Inventory* inv) {
-    gameInventory = inv;
-}
-
-Inventory AfterBattles::sendInventory() {
-    return this->gameInventory;
-}
-
 void AfterBattles::afterBattleNarrations(int lvl, bool failedOutcome) {
     if (failedOutcome == false) {
         cout << "The demon kneeled on the last blow, unable to support its weight with the intense pain it must be feeling." << endl
@@ -17,8 +9,10 @@ void AfterBattles::afterBattleNarrations(int lvl, bool failedOutcome) {
 
         cout << "YOU WIN." << endl << endl;
 
+        gameInventory->addItem("rice cakes", 1);
+
         if (lvl == 1) {
-            // ADJUST INVENTORY
+            gameInventory->addItem("green tea", 1);
         }
     }
 

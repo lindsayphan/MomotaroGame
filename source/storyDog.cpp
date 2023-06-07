@@ -16,10 +16,10 @@ void StoryDog::printNarrative() {
 
     cout << "FATHER: \"Take these with you.\"" << endl << endl;
   
-    gameInventory->addItem("rice cakes", 0, 5);        // NEED TO FIX HEALTH BOOST
+    gameInventory->addItem("rice cakes", 5);
 
     if (meetDog.getLvl() == 1) {
-          gameInventory->addItem("green tea", 0, 5);        // NEED TO FIX HEALTH BOOST
+          gameInventory->addItem("green tea", 5);
     } 
 
     cout << "You said thank you and goodbye to your parents before beginning your long journey." << endl << endl;
