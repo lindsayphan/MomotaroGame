@@ -9,13 +9,13 @@ ADD_EXECUTABLE(test
     tests/monkeyTest.cpp
     tests/birdTest.cpp
     tests/enemyTest.cpp
-    # tests/choicesDogTest.cpp
-    # tests/choicesMonkeyTest.cpp
-    # tests/choicesBirdTest.cpp
-    # tests/difficultyTest.cpp
+    tests/choicesDogTest.cpp
+    tests/choicesMonkeyTest.cpp
+    tests/choicesBirdTest.cpp
+    tests/difficultyTest.cpp
     # # tests/inventoryOutputTest.cpp     // being worked on?
-    # tests/startOverTest.cpp
-    # tests/swapTest.cpp
+    tests/startOverTest.cpp
+    tests/swapTest.cpp
     tests/battleOutputTest.cpp
     tests/battleTest.cpp
 )
