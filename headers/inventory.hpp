@@ -12,7 +12,7 @@ class Inventory {
     list<Item*>::iterator _iterator;
   public:
     ~Inventory();
-    void deleteInventory();
+    // void deleteInventory();
     list<Item*> getInventory() const;
     bool alreadyHave(string itemName);
     void addItem(string itemName, int itemCount);

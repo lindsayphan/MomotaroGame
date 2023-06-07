@@ -2,6 +2,7 @@
 #define CHOICESDOG_HPP
 #include <iostream>
 #include <sstream>
+#include "../headers/choices.hpp"
 using namespace std;
 
 class ChoicesDog: public Choices {

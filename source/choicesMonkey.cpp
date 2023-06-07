@@ -1,7 +1,6 @@
 #include <iostream>
 #include <limits>
 #include <sstream>
-#include "../headers/choices.hpp"
 #include "../headers/choicesMonkey.hpp"
 using namespace std;
 
