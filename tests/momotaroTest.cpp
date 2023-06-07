@@ -57,3 +57,23 @@ TEST(CharacterTest, testAttack) {
     m->attack(enemy);
     EXPECT_EQ(40, enemy->getHP());
 }
+
+TEST(CharacterTest, testAttack2) {
+    Momotaro *m = new Momotaro("Momotaro", 20, 20, 10, 5);
+    Character *enemy = new Character("ONI", 30, 5, 0);
+    m->attack(enemy);
+    EXPECT_EQ(20, enemy->getHP());
+}
+
+TEST(CharacterTest, testSetAndGetAnimal) {
+    Momotaro *m = new Momotaro("Momotaro", 20, 20, 10, 5);
+    m->setAnimal("Dog");
+    EXPECT_EQ("Dog", m->getAnimal());
+}
+
+TEST(CharacterTest, testSetAndGetAnimal2) {
+    Momotaro *m = new Momotaro("Momotaro", 20, 20, 10, 5);
+    m->setAnimal("Bird");
+    m->setAnimal("Monkey");
+    EXPECT_EQ("Monkey", m->getAnimal());
+}

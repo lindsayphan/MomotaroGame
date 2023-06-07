@@ -11,15 +11,19 @@ ADD_EXECUTABLE(test
     tests/birdTest.cpp
     tests/characterTest.cpp
     tests/choicesBirdTest.cpp
+    tests/enemyTest.cpp
+    tests/difficultyTest.cpp
+    tests/inventoryOutputTest.cpp
+    tests/startOverTest.cpp
+    tests/momotaroTest.cpp
     tests/choicesDogTest.cpp
     tests/choicesMonkeyTest.cpp
-    tests/difficultyTest.cpp
     tests/dogTest.cpp
     tests/inventoryTest.cpp
     tests/itemTest.cpp
-    tests/momotaroTest.cpp
     tests/monkeyTest.cpp
-    tests/startOverTest.cpp
+    tests/swapTest.cpp
+    tests/statsOutputTest.cpp
 )
 
 ADD_EXECUTABLE(narrative
