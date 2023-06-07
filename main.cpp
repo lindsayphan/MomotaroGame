@@ -1,14 +1,9 @@
 #include <iostream>
 #include <limits>
 #include "headers/narrative.hpp"
-#include "../headers/character.hpp"
-#include "../headers/battleOutput.hpp"
-#include "headers/difficulty.hpp"
 using namespace std;
 
-// to compile in the terminal:
-// g++ main.cpp source/narrative.cpp source/choices.cpp source/choicesDog.cpp source/choicesMonkey.cpp source/choicesBird.cpp source/difficulty.cpp
-// source/storyDog.cpp source/storyMonkey.cpp source/storyBird.cpp source/finalNarrations.cpp -o narrative
+Inventory* gameInventory = new Inventory();
 
 bool startOverPrompt();
 
@@ -51,6 +46,8 @@ int main() {
                 return 1;
                 break;
             }
+    
+        gameInventory->deleteInventory();
     }
 
     return 0;

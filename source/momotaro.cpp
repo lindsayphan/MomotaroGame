@@ -14,11 +14,11 @@ Momotaro::Momotaro(string n, int health, int maxHealth, int attack, int defense)
 }
 
 void Momotaro::heal(string item) {
-    if (item == "Green Tea") {
+    if (item == "green tea") {
         hp += 10;
         setHP(hp);
     }
-    else if(item == "Rice Cake") {
+    else if(item == "rice cakes") {
         hp += 15;
         setHP(hp);
     }

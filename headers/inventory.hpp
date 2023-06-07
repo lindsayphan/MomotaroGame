@@ -1,18 +1,23 @@
 #ifndef INVENTORY_HPP
 #define INVENTORY_HPP
-
 #include "../headers/item.hpp"
 #include <iostream>
-#include <vector>
+#include <list>
+#include <iterator>
 using namespace std;
 
 class Inventory {
   private:
-    vector<Item> inventory;
+    list<Item*> inventory;
+    list<Item*>::iterator _iterator;
   public:
-    Inventory();
-    void useItem(int listNum);
-    void addItem(int listNum); 
+    ~Inventory();
+    void deleteInventory();
+    list<Item*> getInventory() const;
+    bool alreadyHave(string itemName);
+    void addItem(string itemName, int itemCount);
+    void useItem(string itemName);
+     
 };
 
 #endif

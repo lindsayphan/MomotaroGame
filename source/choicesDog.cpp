@@ -23,7 +23,8 @@ void ChoicesDog::executeAnswer1() {
 
 void ChoicesDog::executeAnswer2() {
     if (getAnswer() == 'y') {
-        // ADJUST INVENTORY
+        
+        gameInventory->useItem("rice cakes");
 
         cout << "DOG: \"Oh, thank you! I wasn't expecting you to give it up so easily, I apologize for being so rude. In return for your kindness, I will join you on your journey!\"" << endl << endl;
 
