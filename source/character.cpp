@@ -3,7 +3,13 @@
 #include "../headers/character.hpp"
 using namespace std;
 
-Character::Character() {}
+Character::Character() {
+    name = "";
+    hp = 0;
+    maxHP = hp;
+    atk = 0;
+    def = 0;
+}
 
 Character::Character(string _name, int _maxHP, int _atk, int _def) {
     this->name = _name;

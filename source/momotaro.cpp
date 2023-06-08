@@ -4,14 +4,12 @@
 #include "../headers/enemy.hpp"
 using namespace std;
 
-Momotaro::Momotaro() {}
-
-Momotaro::Momotaro(string n, int health, int maxHealth, int attack, int defense) {
-    this->name = n;
-    this->hp = health;
-    this->maxHP = maxHealth;
-    this->atk = attack;
-    this->def = defense;
+Momotaro::Momotaro() {
+    name = "MOMOTARO";
+    hp = 20;
+    maxHP = 20;
+    atk = 10;
+    def = 10;
 }
 
 void Momotaro::heal(string item) {

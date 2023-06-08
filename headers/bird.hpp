@@ -9,7 +9,7 @@ using namespace std;
 class Bird: public Character {
   public:
     Bird();
-    Bird(string n, int health, int maxHealth, int attack, int defense);
+    Bird(string _name, int _maxHP, int _atk, int _def) : Character(_name, _maxHP, _atk, _def) {}
     void defend(int enemyHP);
     void attack(Enemy *oni);
 };

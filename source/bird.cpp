@@ -4,14 +4,12 @@
 #include "../headers/enemy.hpp"
 using namespace std;
 
-Bird::Bird() {}
-
-Bird::Bird(string n, int health, int maxHealth, int attack, int defense) {
-    this->name = n;
-    this->hp = health;
-    this->maxHP = maxHealth;
-    this->atk = attack;
-    this->def = defense;
+Bird::Bird() {
+    name = "BIRD";
+    hp = 10;
+    maxHP = 10;
+    atk = 2;
+    def = 8;
 }
 
 void Bird::defend(int enemyHP) {

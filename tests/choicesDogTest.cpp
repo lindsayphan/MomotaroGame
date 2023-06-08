@@ -1,6 +1,6 @@
 #include <sstream>
-#include "../source/choicesDog.cpp"
 #include "../source/choices.cpp"
+#include "../source/choicesDog.cpp"
 #include "../headers/inventory.hpp"
 #include "gtest/gtest.h"
 
