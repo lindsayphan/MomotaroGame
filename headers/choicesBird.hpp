@@ -3,6 +3,7 @@
 #include <iostream>
 #include <sstream>
 #include "../headers/choices.hpp"
+#include "../headers/storyBird.hpp"
 using namespace std;
 
 class ChoicesBird: public Choices {

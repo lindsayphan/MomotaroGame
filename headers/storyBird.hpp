@@ -4,7 +4,10 @@
 #include "../headers/choices.hpp"
 #include "../headers/choicesBird.hpp"
 #include "../headers/storyParts.hpp"
+#include "../headers/bird.hpp"
 using namespace std;
+
+extern Bird* bird;
 
 class StoryBird: public StoryParts {
     private:

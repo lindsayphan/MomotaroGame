@@ -37,7 +37,7 @@ void ChoicesBird::executeAnswer2() {
         // ADJUST AVAILABLE COMPANIONS
 
         if (gameLvl == 1) {
-            // ADJUST BIRD HEALTH
+            bird->setHP(bird->getHP() + 3);
         }
     }
 
