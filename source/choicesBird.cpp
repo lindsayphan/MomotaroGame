@@ -34,10 +34,10 @@ void ChoicesBird::executeAnswer2() {
 
         cout << "BIRD: \"Since you're kind enough to offer me food… Perhaps I shall.\"" << endl << endl;
 
-        // ADJUST AVAILABLE COMPANIONS
+        cout << "BIRD joins your party!" << endl << endl;
 
         if (gameLvl == 1) {
-            bird->setHP(bird->getHP() + 3);
+            bird.setHP(bird.getHP() + 3);
         }
     }
 
@@ -46,6 +46,6 @@ void ChoicesBird::executeAnswer2() {
 
         cout << "BIRD: \"You intrigue me. I shall follow you lot to see how far your courage takes you.\"" << endl << endl;
 
-        // ADJUST AVAILABLE COMPANIONS
+        cout << "BIRD joins your party!" << endl << endl;
     }
 }

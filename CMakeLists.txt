@@ -29,6 +29,10 @@ ADD_EXECUTABLE(narrative
     main.cpp
     source/difficulty.cpp
     source/narrative.cpp
+    source/character.cpp
+    source/dog.cpp
+    source/monkey.cpp
+    source/bird.cpp
     source/choices.cpp
     source/choicesDog.cpp
     source/choicesMonkey.cpp

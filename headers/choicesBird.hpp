@@ -3,8 +3,10 @@
 #include <iostream>
 #include <sstream>
 #include "../headers/choices.hpp"
-#include "../headers/storyBird.hpp"
+#include "../headers/bird.hpp"
 using namespace std;
+
+extern Bird bird;
 
 class ChoicesBird: public Choices {
     public:

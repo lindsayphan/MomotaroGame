@@ -4,6 +4,7 @@
 using namespace std;
 
 Inventory* gameInventory = new Inventory();
+Bird bird = Bird("BIRD", 10, 10, 10, 3);
 
 bool startOverPrompt();
 
