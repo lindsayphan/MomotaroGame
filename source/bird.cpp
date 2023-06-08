@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "../headers/bird.hpp"
+#include "../headers/enemy.hpp"
 using namespace std;
 
 Bird::Bird() {
@@ -16,7 +17,7 @@ void Bird::defend(int enemyHP) {
     this->atk += newAttack;
 }
 
-void Bird::attack(Character *oni) {
+void Bird::attack(Enemy *oni) {
     int damage = (this->hp / this->maxHP) * this->atk;
     int enemyHP = oni->getHP() - damage;
 

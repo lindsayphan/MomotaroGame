@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "../headers/monkey.hpp"
+#include "../headers/enemy.hpp"
 using namespace std;
 
 Monkey::Monkey() {
@@ -16,7 +17,7 @@ void Monkey::defend(int enemyHP) {
     this->atk += newAttack;
 }
 
-void Monkey::attack(Character *oni) {
+void Monkey::attack(Enemy *oni) {
     int damage = (this->hp / this->maxHP) * this->atk;
     int enemyHP = oni->getHP() - damage;
 

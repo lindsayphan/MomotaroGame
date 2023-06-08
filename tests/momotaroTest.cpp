@@ -45,6 +45,7 @@ TEST(CharacterTest, testHealFunc2) {
 
 TEST(CharacterTest, testDefense) {
     Momotaro *m = new Momotaro("Momotaro", 20, 10, 5); 
+    m->setHP(10);
     m->defend(8);
     EXPECT_EQ(13, m->getAtk());
 }
