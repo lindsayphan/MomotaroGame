@@ -2,6 +2,7 @@
 #define CHOICESBIRD_HPP
 #include <iostream>
 #include <sstream>
+#include "../headers/choices.hpp"
 using namespace std;
 
 class ChoicesBird: public Choices {

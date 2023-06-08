@@ -9,8 +9,10 @@ void AfterBattles::afterBattleNarrations(int lvl, bool failedOutcome) {
 
         cout << "YOU WIN." << endl << endl;
 
+        gameInventory->addItem("rice cakes", 1);
+
         if (lvl == 1) {
-            // ADJUST INVENTORY
+            gameInventory->addItem("green tea", 1);
         }
     }
 

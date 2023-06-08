@@ -1,7 +1,4 @@
 #include <iostream>
-#include "../headers/choices.hpp"
-#include "../headers/choicesMonkey.hpp"
-#include "../headers/storyParts.hpp"
 #include "../headers/storyMonkey.hpp"
 using namespace std;
 

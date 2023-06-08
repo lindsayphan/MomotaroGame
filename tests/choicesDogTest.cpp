@@ -1,7 +1,10 @@
 #include <sstream>
 #include "../source/choices.cpp"
 #include "../source/choicesDog.cpp"
+#include "../headers/inventory.hpp"
 #include "gtest/gtest.h"
+
+Inventory* gameInventory = new Inventory();
 
 TEST(ChoicesDogTest, testGetAnswer1) {
     ChoicesDog *answerTest = new ChoicesDog();

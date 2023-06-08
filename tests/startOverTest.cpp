@@ -54,3 +54,8 @@ TEST(startOverTest, testRestartPromptY) {
     testStartover.restartSetAnswer('y');
     EXPECT_TRUE(testStartover.restartPrompt(testBattleLost));
 }
+
+// int main(int argc, char **argv) {
+//   ::testing::InitGoogleTest(&argc, argv);
+//   return RUN_ALL_TESTS();
+// }

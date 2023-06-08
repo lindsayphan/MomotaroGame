@@ -1,7 +1,6 @@
 #include <iostream>
 #include <limits>
 #include <sstream>
-#include "../headers/choices.hpp"
 #include "../headers/choicesMonkey.hpp"
 using namespace std;
 
@@ -23,13 +22,12 @@ void ChoicesMonkey::executeAnswer1() {
 
 void ChoicesMonkey::executeAnswer2() {
     if (getAnswer() == 'y') {
-        // ADJUST INVENTORY
+        
+        gameInventory->useItem("rice cakes");
         
         cout << "YOU: \"Would you like to accompany me to defeat the Devil King?\"" << endl << endl;
 
         cout << "You extended your hand towards it, a rice cake resting on your opened palm." << endl << endl;
-
-        // ADJUST AVAILABLE COMPANIONS
         
         if (gameLvl == 1) {
             // ADJUST MONKEY HEALTH

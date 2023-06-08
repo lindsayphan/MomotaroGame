@@ -1,20 +1,17 @@
 #include <iostream>
 #include <limits>
 #include "headers/narrative.hpp"
-#include "../headers/character.hpp"
-#include "../headers/battleOutput.hpp"
-#include "headers/difficulty.hpp"
 using namespace std;
 
-// to compile in the terminal:
-// g++ main.cpp source/narrative.cpp source/choices.cpp source/choicesDog.cpp source/choicesMonkey.cpp source/choicesBird.cpp source/difficulty.cpp
-// source/storyDog.cpp source/storyMonkey.cpp source/storyBird.cpp source/finalNarrations.cpp -o narrative
+Inventory* gameInventory = new Inventory();
 
 bool startOverPrompt();
 
 int main() {
 
-    while (true) {
+    bool gameIsPlaying = true;
+
+    while (gameIsPlaying) {
         Narrative storyline;
         bool battleLost = false;
         bool repeat = true;
@@ -28,8 +25,8 @@ int main() {
             repeat = startOverPrompt();
                 if (!repeat) {
                     cout << "Thank you for playing!" << endl << endl;
-                    return 1;
-                    break;
+                    gameIsPlaying = false;
+                    continue;
                 }
         }
     
@@ -39,8 +36,8 @@ int main() {
             repeat = startOverPrompt();
                 if (!repeat) {
                     cout << "Thank you for playing!" << endl << endl;
-                    return 1;
-                    break;
+                    gameIsPlaying = false;
+                    continue;
                 }
         }
 
@@ -48,11 +45,17 @@ int main() {
         repeat = startOverPrompt();
             if (!repeat) {
                 cout << "Thank you for playing!" << endl << endl;
-                return 1;
-                break;
+                gameIsPlaying = false;
+                continue;
             }
+    
+        delete gameInventory;
+        gameInventory = new Inventory();
+        // gameInventory->deleteInventory();
     }
-
+    
+    delete gameInventory;
+    
     return 0;
 }
 

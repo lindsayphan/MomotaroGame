@@ -32,14 +32,14 @@ TEST(CharacterTest, callConstructor2) {
 TEST(CharacterTest, testHealFunc) {
     Momotaro *c = new Momotaro("Momotaro", 20, 10, 5);
     c->setHP(10);
-    c->heal("Green Tea");
+    c->heal("green tea");
     EXPECT_EQ(20, c->getHP());
 }
 
 TEST(CharacterTest, testHealFunc2) {
     Momotaro *c = new Momotaro("Momotaro", 20, 10, 5);
     c->setHP(5);
-    c->heal("Rice Cake");
+    c->heal("rice cakes");
     EXPECT_EQ(20, c->getHP());
 }
 
