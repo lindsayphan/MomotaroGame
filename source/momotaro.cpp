@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "../headers/momotaro.hpp"
+#include "../headers/enemy.hpp"
 using namespace std;
 
 Momotaro::Momotaro() {}
@@ -29,7 +30,7 @@ void Momotaro::defend(int enemyHP) {
     this->atk += newAttack;
 }
 
-void Momotaro::attack(Character *oni) {
+void Momotaro::attack(Enemy *oni) {
     int damage = (this->hp / this->maxHP) * this->atk;
     int enemyHP = oni->getHP() - damage;
 
