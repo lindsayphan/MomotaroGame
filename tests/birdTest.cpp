@@ -1,4 +1,5 @@
 #include "../source/bird.cpp"
+#include "../source/enemy.cpp"
 #include "gtest/gtest.h"
 
 TEST(BirdTest, constructorTest) {
@@ -41,14 +42,14 @@ TEST(BirdTest, testDefense2) {
 
 TEST(BirdTest, testAttack) {
     Bird *b = new Bird("Bird", 10, 10, 3, 3);
-    Character *enemy = new Character("ONI", 50, 5, 0);
+    Enemy *enemy = new Enemy("ONI", 50, 5, 0);
     b->attack(enemy);
     EXPECT_EQ(47, enemy->getHP());
 }
 
 TEST(BirdTest, testAttack2) {
     Bird *b = new Bird("Bird", 10, 10, 3, 3);
-    Character *enemy = new Character("ONI", 30, 5, 0);
+    Enemy *enemy = new Enemy("ONI", 30, 5, 0);
     b->attack(enemy);
     EXPECT_EQ(27, enemy->getHP());
 }

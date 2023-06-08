@@ -1,4 +1,5 @@
 #include "../source/monkey.cpp"
+#include "../source/enemy.cpp"
 #include "gtest/gtest.h"
 
 TEST(MonkeyTest, constructorTest) {
@@ -41,14 +42,14 @@ TEST(MonkeyTest, testDefense2) {
 
 TEST(MonkeyTest, testAttack) {
     Monkey *m = new Monkey("Monkey", 10, 10, 7, 3);
-    Character *enemy = new Character("ONI", 50, 5, 0);
+    Enemy *enemy = new Enemy("ONI", 50, 5, 0);
     m->attack(enemy);
     EXPECT_EQ(43, enemy->getHP());
 }
 
 TEST(MonkeyTest, testAttack2) {
     Monkey *m = new Monkey("Monkey", 10, 10, 7, 3);
-    Character *enemy = new Character("ONI", 20, 5, 0);
+    Enemy *enemy = new Enemy("ONI", 20, 5, 0);
     m->attack(enemy);
     EXPECT_EQ(13, enemy->getHP());
 }
