@@ -6,7 +6,7 @@
 #include "gtest/gtest.h"
 
 Inventory* gameInventory = new Inventory();
-Dog dog = Dog("Dog", 10, 10, 5, 5);
+Dog dog = Dog();
 
 TEST(ChoicesDogTest, testGetAnswer1) {
     ChoicesDog *answerTest = new ChoicesDog();

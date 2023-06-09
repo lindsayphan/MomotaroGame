@@ -5,7 +5,7 @@
 #include "../headers/monkey.hpp"
 #include "gtest/gtest.h"
 
-Monkey monkey = Monkey("Monkey", 10, 10, 7, 3);
+Monkey monkey = Monkey();
 
 TEST(ChoicesMonkeyTest, testGetAnswer1) {
     ChoicesMonkey *answerTest = new ChoicesMonkey();

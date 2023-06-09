@@ -5,7 +5,7 @@
 #include "../headers/bird.hpp"
 #include "gtest/gtest.h"
 
-Bird bird = Bird("BIRD", 10, 10, 10, 3);
+Bird bird = Bird();
 
 TEST(ChoicesBirdTest, testGetAnswer1) {
     ChoicesBird *answerTest = new ChoicesBird();

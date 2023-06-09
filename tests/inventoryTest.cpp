@@ -5,7 +5,7 @@
 #include "../headers/bird.hpp"
 #include "gtest/gtest.h"
 
-Momotaro momotaro = Momotaro("MOMOTARO", 20, 20, 10, 5);
+Momotaro momotaro = Momotaro();
 extern Dog dog;
 extern Monkey monkey;
 extern Bird bird;

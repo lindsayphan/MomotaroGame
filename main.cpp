@@ -2,6 +2,7 @@
 #include <limits>
 #include "headers/narrative.hpp"
 #include "headers/battle.hpp"
+#include "headers/inventoryMenu.hpp"
 #include "headers/battleOutput.hpp"
 #include "headers/statsOutput.hpp"
 #include "headers/character.hpp"
@@ -11,10 +12,10 @@
 using namespace std;
 
 Inventory* gameInventory = new Inventory();
-Momotaro momotaro = Momotaro("MOMOTARO", 20, 20, 10, 5);
-Dog dog = Dog("DOG", 10, 10, 5, 5);
-Monkey monkey = Monkey("MONKEY", 10, 10, 7, 3);
-Bird bird = Bird("BIRD", 10, 10, 10, 3);
+Momotaro momotaro = Momotaro();
+Dog dog = Dog();
+Monkey monkey = Monkey();
+Bird bird = Bird();
 
 bool startOverPrompt();
 
@@ -53,7 +54,8 @@ int main() {
             } else if (choice == "DEFEND") {
                 totalDamageTaken -= momotaro->getDef();
             } else if (choice == "HEAL") {
-                // FIXME
+                InventoryMenu menu;
+                menu.displayInventoryMenu();
             } else if (choice == "STATS") {
                 StatsOutput stats;
                 stats.printStats(momotaro, dog);
