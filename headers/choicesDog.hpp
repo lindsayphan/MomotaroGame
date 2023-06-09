@@ -3,7 +3,10 @@
 #include <iostream>
 #include <sstream>
 #include "../headers/choices.hpp"
+#include "../headers/dog.hpp"
 using namespace std;
+
+extern Dog dog;
 
 class ChoicesDog: public Choices {
     public:

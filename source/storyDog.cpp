@@ -37,6 +37,8 @@ void StoryDog::printNarrative() {
     
     meetDog.question();
 
+    cout << "DOG joins your party!" << endl << endl;
+
     cout << "Once you were ready, you resumed your journey — now with the dog following your trail. "
          << "At least, that was the plan until a dark ominous figure blocked your path." << endl
          << "Fortunately, you overheard enough stories from your neighbors to realize that you were now facing a demon." << endl << endl;

@@ -48,6 +48,8 @@ void StoryBird::printNarrative() {
 
     meetBird.question();
 
+    cout << "BIRD joins your party!" << endl << endl;
+
     cout << "With another member recruited to your party, you and your three companions set out once more." << endl
          << "As you travel for miles on end, the destruction around you seems to have become greater in magnitude." << endl
          << "Each street you passed by had less and less life the more you walked on." << endl << endl;
