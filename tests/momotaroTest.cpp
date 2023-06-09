@@ -58,14 +58,14 @@ TEST(CharacterTest, testDefense2) {
 
 TEST(CharacterTest, testAttack) {
     Momotaro *m = new Momotaro("Momotaro", 20, 10, 5);
-    Character *enemy = new Character("ONI", 50, 5, 0);
+    Enemy *enemy = new Enemy("ONI", 50, 5, 0);
     m->attack(enemy);
     EXPECT_EQ(40, enemy->getHP());
 }
 
 TEST(CharacterTest, testAttack2) {
     Momotaro *m = new Momotaro("Momotaro", 20, 10, 5);
-    Character *enemy = new Character("ONI", 30, 5, 0);
+    Enemy *enemy = new Enemy("ONI", 30, 5, 0);
     m->attack(enemy);
     EXPECT_EQ(20, enemy->getHP());
 }
