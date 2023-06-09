@@ -14,7 +14,6 @@
 using namespace std;
 
 Inventory* gameInventory = new Inventory();
-
 bool startOverPrompt();
 void doBattle(Momotaro *momotaro, Character *companion, Enemy *enemy);
 

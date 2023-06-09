@@ -3,7 +3,10 @@
 #include <iostream>
 #include <sstream>
 #include "../headers/choices.hpp"
+#include "../headers/monkey.hpp"
 using namespace std;
+
+extern Monkey monkey;
 
 class ChoicesMonkey: public Choices {
     public:

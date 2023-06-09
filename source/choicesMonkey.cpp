@@ -30,9 +30,10 @@ void ChoicesMonkey::executeAnswer2() {
         cout << "You extended your hand towards it, a rice cake resting on your opened palm." << endl << endl;
         
         if (gameLvl == 1) {
-            // ADJUST MONKEY HEALTH
+            monkey.setHP(monkey.getHP() + 3);
         }
     }
+    
 
     else {
         cout << "You ignored the sound and, as if nothing happened, you proceeded to ask what you meant to ask after hearing the connection it made." << endl << endl;
