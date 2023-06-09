@@ -10,7 +10,9 @@ class BattleOutput {
     void doubleLineBreak() const;
     void singleLineBreak() const;
     void printHealthBar(string name, int currHealth, int maxHealth) const;
-    void damageTakenMessage() const;
+    void printMomotaroChoices();
+    void printCompanionChoices();
+    // void damageTakenMessage() const;
 };
 
 #endif

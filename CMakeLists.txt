@@ -28,6 +28,13 @@ ADD_EXECUTABLE(test
 
 ADD_EXECUTABLE(narrative
     main.cpp
+    source/character.cpp
+    source/enemy.cpp
+    source/dog.cpp
+    source/momotaro.cpp
+    source/statsOutput.cpp
+    source/battle.cpp
+    source/battleOutput.cpp
     source/difficulty.cpp
     source/narrative.cpp
     source/choices.cpp

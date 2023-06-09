@@ -47,3 +47,11 @@ void BattleOutput::printHealthBar(string name, int currHealth, int maxHealth) co
         out(color, 0, healthBar);
     }
 }
+
+void BattleOutput::printMomotaroChoices() {
+    cout << "|     ATTACK    |    DEFEND    |     HEAL     |    STATS     |" << endl;
+}
+
+void BattleOutput::printCompanionChoices() {
+    cout << "|     ATTACK    |    DEFEND    |     SWAP     |    STATS     |" << endl;
+}

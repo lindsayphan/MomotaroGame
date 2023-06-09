@@ -17,7 +17,6 @@ class Inventory {
     bool alreadyHave(string itemName);
     void addItem(string itemName, int itemCount);
     void useItem(string itemName);
-     
 };
 
 #endif

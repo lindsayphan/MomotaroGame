@@ -11,6 +11,7 @@ using namespace std;
 
 class StatsOutput {
   public:
+    void printStats(Momotaro *s_momotaro, Character *s_companion);
     void printStats(Momotaro *momotaro, Dog *dog, Monkey *monkey, Bird *bird);
 };
 
