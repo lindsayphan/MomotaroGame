@@ -10,6 +10,7 @@
 #include "headers/dog.hpp"
 #include "headers/monkey.hpp"
 #include "headers/bird.hpp"
+#include "headers/inventoryMenu.hpp"
 using namespace std;
 
 Inventory* gameInventory = new Inventory();
@@ -61,6 +62,7 @@ int main() {
             cout << "MOMOTARO DIED" << endl;
             battleLost = true;
         }
+        delete enemy2;
         if (battleLost == true) {
             repeat = startOverPrompt();
                 if (!repeat) {
@@ -77,6 +79,7 @@ int main() {
         while (enemy2->getHP() > 0 && momotaro->getHP() > 0) {
             doBattle(momotaro, bird, enemy3);
         }
+        delete enemy3;
         if (momotaro->getHP() <= 0) {
             cout << "MOMOTARO DIED" << endl;
             battleLost = true;
@@ -100,11 +103,14 @@ int main() {
     
         delete gameInventory;
         gameInventory = new Inventory();
+        delete momotaro;
+        delete dog;
+        delete monkey;
+        delete bird;
         // gameInventory->deleteInventory();
     }
     
     delete gameInventory;
-    
     return 0;
 }
 
@@ -154,7 +160,8 @@ void doBattle(Momotaro *momotaro, Character *companion, Enemy *enemy) {
     } else if (choice == "DEFEND") {
         totalDamageTaken -= momotaro->getDef();
     } else if (choice == "HEAL") {
-        // FIXME
+        InventoryMenu menu;
+        menu.displayInventoryMenu();
     } else if (choice == "STATS") {
         StatsOutput stats;
         stats.printStats(momotaro, companion);
@@ -193,5 +200,7 @@ void doBattle(Momotaro *momotaro, Character *companion, Enemy *enemy) {
         if (companion->getHP() > 0) {
             fightOutput.out(31,0, to_string(totalDamageTaken/2) + " DAMAGE dealt to " + companion->getName());
         }
+    } else {
+        cout << "You defeated " << enemy->getName() << "!" << endl;
     }
 }
