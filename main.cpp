@@ -9,7 +9,7 @@
 #include "headers/enemy.hpp"
 #include "headers/dog.hpp"
 #include "headers/monkey.hpp"
-
+#include "headers/bird.hpp"
 using namespace std;
 
 Inventory* gameInventory = new Inventory();
@@ -18,7 +18,7 @@ bool startOverPrompt();
 void doBattle(Momotaro *momotaro, Character *companion, Enemy *enemy);
 
 int main() {
-
+    cout << "Please press the CAPS LOCK key" << endl;
     bool gameIsPlaying = true;
 
     while (gameIsPlaying) {
@@ -38,7 +38,7 @@ int main() {
         }
         delete enemy1;
         if (momotaro->getHP() <= 0) {
-            cout << "MOMOTARO DIED";
+            cout << "MOMOTARO DIED" << endl;
             battleLost = true;
         }
         if (battleLost == true) {
@@ -58,7 +58,7 @@ int main() {
             doBattle(momotaro, monkey, enemy2);
         }
         if (momotaro->getHP() <= 0) {
-            cout << "MOMOTARO DIED";
+            cout << "MOMOTARO DIED" << endl;
             battleLost = true;
         }
         if (battleLost == true) {
@@ -78,7 +78,7 @@ int main() {
             doBattle(momotaro, bird, enemy3);
         }
         if (momotaro->getHP() <= 0) {
-            cout << "MOMOTARO DIED";
+            cout << "MOMOTARO DIED" << endl;
             battleLost = true;
         }
         if (battleLost == true) {
