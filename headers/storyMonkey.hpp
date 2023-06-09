@@ -4,7 +4,10 @@
 #include "../headers/choices.hpp"
 #include "../headers/choicesMonkey.hpp"
 #include "../headers/storyParts.hpp"
+#include "../headers/monkey.hpp"
 using namespace std;
+
+extern Monkey monkey;
 
 class StoryMonkey: public StoryParts {
     private:

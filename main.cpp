@@ -5,6 +5,8 @@ using namespace std;
 
 Inventory* gameInventory = new Inventory();
 Bird bird = Bird("BIRD", 10, 10, 10, 3);
+Dog dog = Dog("Dog", 10, 10, 5, 5);
+Monkey monkey = Monkey("Monkey", 10, 10, 7, 3);
 
 bool startOverPrompt();
 
