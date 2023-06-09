@@ -70,18 +70,27 @@ int main() {
                 }
         }
     
-        // storyline.finale();
-        // // FINAL BATTLE [battleLost = battle()];
-        // if (battleLost == true) {
-        //     repeat = startOverPrompt();
-        //         if (!repeat) {
-        //             cout << "Thank you for playing!" << endl << endl;
-        //             gameIsPlaying = false;
-        //             continue;
-        //         }
-        // }
+        storyline.finale();
+        // FINAL BATTLE [battleLost = battle()];
+        Enemy *enemy3 = new Enemy("BOSS ONI", 100, 15, 10);
+        Bird *bird = new Bird();
+        while (enemy2->getHP() > 0 && momotaro->getHP() > 0) {
+            doBattle(momotaro, bird, enemy3);
+        }
+        if (momotaro->getHP() <= 0) {
+            cout << "MOMOTARO DIED";
+            battleLost = true;
+        }
+        if (battleLost == true) {
+            repeat = startOverPrompt();
+                if (!repeat) {
+                    cout << "Thank you for playing!" << endl << endl;
+                    gameIsPlaying = false;
+                    continue;
+                }
+        }
 
-        // storyline.epilogue();
+        storyline.epilogue();
         repeat = startOverPrompt();
             if (!repeat) {
                 cout << "Thank you for playing!" << endl << endl;
