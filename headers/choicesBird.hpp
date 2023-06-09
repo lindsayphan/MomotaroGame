@@ -6,7 +6,7 @@
 #include "../headers/bird.hpp"
 using namespace std;
 
-extern Bird bird;
+extern Bird* bird;
 
 class ChoicesBird: public Choices {
     public:

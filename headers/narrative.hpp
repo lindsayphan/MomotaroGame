@@ -21,7 +21,8 @@ class Narrative {
     public:
         Narrative();
         void beginning();
-        void middle();
+        void middle1();
+        void middle2();
         void finale();
         void epilogue();
 };

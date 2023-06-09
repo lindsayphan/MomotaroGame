@@ -2,6 +2,7 @@
 #define STORYPARTS_HPP
 #include <iostream>
 #include <sstream>
+#include "../headers/character.hpp"
 #include "../headers/inventory.hpp"
 using namespace std;
 

@@ -7,7 +7,7 @@
 #include "../headers/bird.hpp"
 using namespace std;
 
-extern Bird bird;
+extern Bird* bird;
 
 class StoryBird: public StoryParts {
     private:

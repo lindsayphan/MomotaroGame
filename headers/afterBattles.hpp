@@ -8,8 +8,8 @@ extern Inventory* gameInventory;
 
 class AfterBattles {
     public:
-        void afterBattleNarrations(int lvl, bool failedOutcome);
-        void afterFinalBattleNarrations(int lvl, bool failedOutcome);
+        void afterBattleNarrations(bool failedOutcome);
+        void afterFinalBattleNarrations(bool failedOutcome);
 };
 
 #endif

@@ -9,9 +9,9 @@
 #include "../headers/monkey.hpp"
 using namespace std;
 
-extern Momotaro momotaro;
-extern Dog dog;
-extern Monkey monkey;
+extern Momotaro* momotaro;
+extern Dog* dog;
+extern Monkey* monkey;
 
 class StoryMonkey: public StoryParts {
     private:

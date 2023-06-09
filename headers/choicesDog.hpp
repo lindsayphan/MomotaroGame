@@ -6,7 +6,7 @@
 #include "../headers/dog.hpp"
 using namespace std;
 
-extern Dog dog;
+extern Dog* dog;
 
 class ChoicesDog: public Choices {
     public:

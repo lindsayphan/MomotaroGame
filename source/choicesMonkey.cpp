@@ -30,7 +30,7 @@ void ChoicesMonkey::executeAnswer2() {
         cout << "You extended your hand towards it, a rice cake resting on your opened palm." << endl << endl;
         
         if (gameLvl == 1) {
-            monkey.setHP(monkey.getHP() + 3);
+            monkey->setHP(monkey->getHP() + 3);
         }
     }
     

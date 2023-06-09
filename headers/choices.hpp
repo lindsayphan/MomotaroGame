@@ -3,6 +3,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include "../headers/character.hpp"
 #include "../headers/inventory.hpp"
 using namespace std;
 

@@ -2,11 +2,12 @@
 #include "../source/choices.cpp"
 #include "../source/choicesDog.cpp"
 #include "../headers/inventory.hpp"
+#include "../headers/character.hpp"
 #include "../headers/dog.hpp"
 #include "gtest/gtest.h"
 
 Inventory* gameInventory = new Inventory();
-Dog dog = Dog();
+Dog* dog = new Dog();
 
 TEST(ChoicesDogTest, testGetAnswer1) {
     ChoicesDog *answerTest = new ChoicesDog();
