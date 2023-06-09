@@ -4,6 +4,19 @@
 
 using namespace std;
 
+void StatsOutput::printStats(Momotaro *s_momotaro, Character *s_companion) {
+cout << "=========================== STATS ===========================" << endl;
+    cout << "|MOMOTARO\t|DOG\t\t|" << endl;
+    cout << "|HP  : " << s_momotaro->getHP() << "/" << s_momotaro->getMaxHP() << "\t|" <<
+            "HP  : " << s_companion->getHP() << "/" << s_companion->getMaxHP() << "\t|" << endl;
+    cout << "|ATK : " << s_momotaro->getAtk() << "\t|" <<
+            "ATK : " << s_companion->getAtk() << "\t|" << endl;
+    cout << "|DEF : " << s_momotaro->getDef() << "\t|" << 
+            "DEF : " << s_companion->getDef() << "\t|" << endl << endl;
+    cout << "Selected companion: " << s_momotaro->getAnimal() << endl;
+    cout << "=============================================================" << endl << endl;
+}
+
 void StatsOutput::printStats(Momotaro *s_momotaro, Dog *s_dog, Monkey *s_monkey, Bird *s_bird) {
     cout << "=========================== STATS ===========================" << endl;
     cout << "|MOMOTARO\t|DOG\t\t|MONKEY\t\t|BIRD" << endl;

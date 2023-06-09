@@ -1,7 +1,12 @@
 #include <iostream>
 #include "../headers/battle.hpp"
 #include "../headers/battleOutput.hpp"
+#include "../headers/inventoryMenu.hpp"
 using namespace std;
+
+void Battle::damageDealt(Enemy *d_enemy, int totalDmg) {
+    d_enemy->setHP(d_enemy->getHP() - totalDmg);
+}
 
 int Battle::damageDealt(Momotaro *d_momotaro, Character *d_companion, Enemy *d_enemy) {
     int totalDmgDealt = d_momotaro->getAtk() + d_companion->getAtk();
@@ -14,3 +19,7 @@ void Battle::damageTaken(Momotaro *d_momotaro, Character *d_companion, Enemy *d_
     d_momotaro->setHP(d_momotaro->getHP() - totalDmgTaken);
     d_companion->setHP(d_companion->getHP() - totalDmgTaken);
 }
+
+// void Battle::battleUseItem(string _itemName) {
+    
+// }

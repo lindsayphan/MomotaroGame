@@ -64,3 +64,10 @@ TEST(BattleTest, testDamageDealt) {
     battleOutput.printHealthBar("MONKEY",testMonkey->getHP(),testMonkey->getMaxHP());
     battleOutput.singleLineBreak();
 }
+
+// TEST(BattleTest, callInventoryUseItem) {
+//     Inventory *newInventory = new Inventory();
+//     newInventory->addItem("name", 1);
+//     Battle battle;
+//     battle.battleUseItem("name");
+// }

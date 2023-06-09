@@ -136,6 +136,8 @@ void Inventory::useItem(string itemName) {
             }
 
             cout << "-1 " << itemName << " from inventory." << endl << endl;
+        } else {
+            cout << "Not in inventory" << endl << endl;
         }
     } 
 }

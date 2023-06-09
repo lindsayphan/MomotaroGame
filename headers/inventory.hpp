@@ -30,7 +30,6 @@ class Inventory {
     int healHP(string item);
     void promptForUse(string itemName);
     void useItem(string itemName);
-     
 };
 
 #endif
