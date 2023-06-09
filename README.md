@@ -73,11 +73,14 @@ The game is entirely played in the terminal and will mainly use two screens: one
 ## Screenshots
 Story screenshot example:
    ![story beinning ex](screencaps/beginning_of_game.png)
+   
 Battle screenshot example:
    ![Battle Screen ex](screencaps/battle_screen_example.png)
+   
 Battle screenshot example 2:
    ![Battle screen 2 ex](screencaps/battle_screen_example_2.png)
-Battle lost screenshot example:
+   
+Battle lost (end of game) screenshot example:
    ![Lost Screen ex](screencaps/lost_screen.png)
    
 ## Installation/Usage
