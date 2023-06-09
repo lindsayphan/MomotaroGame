@@ -69,5 +69,5 @@ string InventoryMenu::validateAnswer() {
 }
 
 void InventoryMenu::adjustInventory(string selectedItem) {
-    gameInventory->useItem(selectedItem);
+    gameInventory->promptForUse(selectedItem);
 }

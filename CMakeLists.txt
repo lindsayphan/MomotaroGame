@@ -12,21 +12,21 @@ ADD_EXECUTABLE(test
     tests/birdTest.cpp
     tests/characterTest.cpp
     tests/choicesBirdTest.cpp
-    tests/enemyTest.cpp
-    tests/difficultyTest.cpp
-    tests/momotaroTest.cpp
     tests/choicesDogTest.cpp
     tests/choicesMonkeyTest.cpp
     tests/dogTest.cpp
+    tests/difficultyTest.cpp
+    tests/enemyTest.cpp
     tests/inventoryTest.cpp
     tests/itemTest.cpp
+    tests/momotaroTest.cpp
     tests/monkeyTest.cpp
     tests/startOverTest.cpp
     tests/statsOutputTest.cpp
     tests/swapTest.cpp  
 )
 
-ADD_EXECUTABLE(narrative
+ADD_EXECUTABLE(game
     main.cpp
     source/character.cpp
     source/enemy.cpp
@@ -37,6 +37,11 @@ ADD_EXECUTABLE(narrative
     source/battleOutput.cpp
     source/difficulty.cpp
     source/narrative.cpp
+    source/character.cpp
+    source/momotaro.cpp
+    source/dog.cpp
+    source/monkey.cpp
+    source/bird.cpp
     source/choices.cpp
     source/choicesDog.cpp
     source/choicesMonkey.cpp

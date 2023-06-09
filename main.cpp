@@ -8,10 +8,13 @@
 #include "headers/momotaro.hpp"
 #include "headers/enemy.hpp"
 #include "headers/dog.hpp"
-
 using namespace std;
 
 Inventory* gameInventory = new Inventory();
+Momotaro momotaro = Momotaro("MOMOTARO", 20, 20, 10, 5);
+Dog dog = Dog("DOG", 10, 10, 5, 5);
+Monkey monkey = Monkey("MONKEY", 10, 10, 7, 3);
+Bird bird = Bird("BIRD", 10, 10, 10, 3);
 
 bool startOverPrompt();
 

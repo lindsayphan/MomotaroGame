@@ -2,7 +2,10 @@
 #include "../source/choicesBird.cpp"
 #include "../headers/choices.hpp"
 #include "../headers/inventory.hpp"
+#include "../headers/bird.hpp"
 #include "gtest/gtest.h"
+
+Bird bird = Bird("BIRD", 10, 10, 10, 3);
 
 TEST(ChoicesBirdTest, testGetAnswer1) {
     ChoicesBird *answerTest = new ChoicesBird();
