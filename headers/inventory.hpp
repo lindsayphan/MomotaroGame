@@ -1,6 +1,7 @@
 #ifndef INVENTORY_HPP
 #define INVENTORY_HPP
 #include "../headers/item.hpp"
+#include "../headers/character.hpp"
 #include "../headers/momotaro.hpp"
 #include "../headers/dog.hpp"
 #include "../headers/monkey.hpp"
@@ -11,10 +12,10 @@
 #include <iterator>
 using namespace std;
 
-extern Momotaro momotaro;
-extern Dog dog;
-extern Monkey monkey;
-extern Bird bird;
+extern Momotaro* momotaro;
+extern Dog* dog;
+extern Monkey* monkey;
+extern Bird* bird;
 
 class Inventory {
   private:

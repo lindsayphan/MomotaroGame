@@ -28,7 +28,7 @@ void ChoicesDog::executeAnswer2() {
         cout << "DOG: \"Oh, thank you! I wasn't expecting you to give it up so easily, I apologize for being so rude. In return for your kindness, I will join you on your journey!\"" << endl << endl;
         
         if (gameLvl == 1) {
-            dog.setHP(dog.getHP() + 3);
+            dog->setHP(dog->getHP() + 3);
         }
     }
 

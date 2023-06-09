@@ -74,7 +74,7 @@ int Inventory::healHP(string item) {
 }
 
 void Inventory::promptForUse(string itemName) {
-    cout << "Who do you want to use " << itemName << "on? Type \'y\' for YOU, \'d\' for DOG, \'m\' for MONKEY, \'b\' for BIRD. ";
+    cout << "Who do you want to use " << itemName << " on? Type \'y\' for YOU, \'d\' for DOG, \'m\' for MONKEY, \'b\' for BIRD. ";
 
     string answer = "input";
     cin >> answer; 
@@ -97,23 +97,23 @@ void Inventory::promptForUse(string itemName) {
     int heal = healHP(itemName);
 
     if (answer[0] == 'y') {
-        momotaro.setHP(momotaro.getHP() + heal);
-        cout << "MOMOTARO HEALTH " << momotaro.getHP() << "!" << endl << endl;
+        momotaro->setHP(momotaro->getHP() + heal);
+        cout << "MOMOTARO HEALTH " << momotaro->getHP() << "!" << endl << endl;
     }
 
     else if (answer[0] == 'd') {
-        dog.setHP(dog.getHP() + heal);
-        cout << "DOG HEALTH " << dog.getHP() << "!" << endl << endl;
+        dog->setHP(dog->getHP() + heal);
+        cout << "DOG HEALTH " << dog->getHP() << "!" << endl << endl;
     }
 
     else if (answer[0] == 'm') {
-        monkey.setHP(monkey.getHP() + heal);
-        cout << "MONKEY HEALTH " << monkey.getHP() << "!" << endl << endl;
+        monkey->setHP(monkey->getHP() + heal);
+        cout << "MONKEY HEALTH " << monkey->getHP() << "!" << endl << endl;
     }
 
     else if (answer[0] == 'b') {
-        bird.setHP(bird.getHP() + heal);
-        cout << "BIRD HEALTH " << bird.getHP() << "!" << endl << endl;
+        bird->setHP(bird->getHP() + heal);
+        cout << "BIRD HEALTH " << bird->getHP() << "!" << endl << endl;
     }
 }
 
@@ -136,8 +136,6 @@ void Inventory::useItem(string itemName) {
             }
 
             cout << "-1 " << itemName << " from inventory." << endl << endl;
-        } else {
-            cout << "Not in inventory" << endl << endl;
         }
     } 
 }

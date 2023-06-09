@@ -6,7 +6,7 @@
 #include "../headers/monkey.hpp"
 using namespace std;
 
-extern Monkey monkey;
+extern Monkey* monkey;
 
 class ChoicesMonkey: public Choices {
     public:

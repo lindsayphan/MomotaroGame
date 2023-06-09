@@ -2,10 +2,11 @@
 #include "../source/choicesMonkey.cpp"
 #include "../headers/choices.hpp"
 #include "../headers/inventory.hpp"
+#include "../headers/character.hpp"
 #include "../headers/monkey.hpp"
 #include "gtest/gtest.h"
 
-Monkey monkey = Monkey("Monkey", 10, 10, 7, 3);
+Monkey* monkey = new Monkey();
 
 TEST(ChoicesMonkeyTest, testGetAnswer1) {
     ChoicesMonkey *answerTest = new ChoicesMonkey();

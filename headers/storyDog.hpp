@@ -7,7 +7,7 @@
 #include "../headers/dog.hpp"
 using namespace std;
 
-extern Dog dog;
+extern Dog* dog;
 
 class StoryDog: public StoryParts {
     private:

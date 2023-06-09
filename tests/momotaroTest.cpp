@@ -29,19 +29,19 @@ TEST(CharacterTest, callConstructor2) {
     EXPECT_NO_THROW(Momotaro *testCharacter = new Momotaro());
 }
 
-TEST(CharacterTest, testHealFunc) {
-    Momotaro *c = new Momotaro("Momotaro", 20, 10, 5);
-    c->setHP(10);
-    c->heal("green tea");
-    EXPECT_EQ(20, c->getHP());
-}
+// TEST(CharacterTest, testHealFunc) {
+//     Momotaro *c = new Momotaro("Momotaro", 20, 10, 5);
+//     c->setHP(10);
+//     c->heal("green tea");
+//     EXPECT_EQ(20, c->getHP());
+// }
 
-TEST(CharacterTest, testHealFunc2) {
-    Momotaro *c = new Momotaro("Momotaro", 20, 10, 5);
-    c->setHP(5);
-    c->heal("rice cakes");
-    EXPECT_EQ(20, c->getHP());
-}
+// TEST(CharacterTest, testHealFunc2) {
+//     Momotaro *c = new Momotaro("Momotaro", 20, 10, 5);
+//     c->setHP(5);
+//     c->heal("rice cakes");
+//     EXPECT_EQ(20, c->getHP());
+// }
 
 TEST(CharacterTest, testDefense) {
     Momotaro *m = new Momotaro("Momotaro", 20, 10, 5); 

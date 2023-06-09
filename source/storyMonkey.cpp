@@ -16,13 +16,13 @@ void StoryMonkey::printNarrative() {
          << "Though somehow, en route to your destination, concerned citizens saw you two pass by their neighborhood — and they were understandably " << endl
          << "alarmed by your wounds and bruises. You ended up spending some time with them as they took their time to patch you two up." << endl << endl;
 
-     int HPdifference = momotaro.getMaxHP() - momotaro.getHP();
-     momotaro.setHP(momotaro.getHP() + HPdifference);
-     cout << "MOMOTARO HEALTH back to " << momotaro.getHP() << "!" << endl;
+     int HPdifference = momotaro->getMaxHP() - momotaro->getHP();
+     momotaro->setHP(momotaro->getHP() + HPdifference);
+     cout << "MOMOTARO HEALTH back to " << momotaro->getHP() << "!" << endl;
 
-     HPdifference = dog.getMaxHP() - dog.getHP();
-     dog.setHP(dog.getHP() + HPdifference);
-     cout << "DOG HEALTH back to " << dog.getHP() << "!" << endl << endl;
+     HPdifference = dog->getMaxHP() - dog->getHP();
+     dog->setHP(dog->getHP() + HPdifference);
+     cout << "DOG HEALTH back to " << dog->getHP() << "!" << endl << endl;
 
     cout << "YOU: \"It was nice of them to fix us up even if we didn't ask them to.\"" << endl << endl;
 
