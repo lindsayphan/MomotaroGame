@@ -21,7 +21,7 @@ Dog* dog = new Dog();
 Monkey* monkey = new Monkey();
 Bird* bird = new Bird();
 bool startOverPrompt();
-void doBattle(Momotaro *momotaro, Character *companion, Enemy *enemy);
+void doBattle(Momotaro *momotaro, Character *companion, Enemy *enemy, int);
 
 int main() {
     cout << "Please press the CAPS LOCK key" << endl << endl;
@@ -37,11 +37,12 @@ int main() {
 
         // BATTLE 1
         Enemy *enemy1 = new Enemy("SMALL ONI", 30, 8, 5);
+        momotaro->setAnimal("DOG");
         // Momotaro *momotaro = new Momotaro();
         // Dog *dog = new Dog();
 
         while (enemy1->getHP() > 0 && momotaro->getHP() > 0) {
-            doBattle(momotaro, dog, enemy1);
+            doBattle(momotaro, dog, enemy1,1);
         }
 
         delete enemy1;
@@ -65,10 +66,11 @@ int main() {
         storyline.middle1();
         //BATTLE 2
         Enemy *enemy2 = new Enemy("MEDIUM ONI", 50, 10, 10);
+        momotaro->setAnimal("MONKEY");
         // Monkey *monkey = new Monkey();
 
         while (enemy2->getHP() > 0 && momotaro->getHP() > 0) {
-            doBattle(momotaro, monkey, enemy2);
+            doBattle(momotaro, monkey, enemy2,2);
         }
 
        delete enemy2; 
@@ -92,10 +94,11 @@ int main() {
         storyline.middle2();
         // BATTLE 3
         Enemy *enemy3 = new Enemy("LARGE ONI", 75, 15, 10);
+        momotaro->setAnimal("BIRD");
         // Bird *bird = new Bird();
 
         while (enemy3->getHP() > 0 && momotaro->getHP() > 0) {
-            doBattle(momotaro, bird, enemy3);
+            doBattle(momotaro, bird, enemy3,3);
         }
 
         delete enemy3;
@@ -121,7 +124,7 @@ int main() {
         Enemy *enemy4 = new Enemy("BOSS ONI", 100, 18, 10);
 
         while (enemy4->getHP() > 0 && momotaro->getHP() > 0) {
-            doBattle(momotaro, bird, enemy4);
+            doBattle(momotaro, bird, enemy4,3);
         }
 
         delete enemy4;
@@ -197,7 +200,7 @@ bool startOverPrompt() {
     }
 }
 
-void doBattle(Momotaro *momotaro, Character *companion, Enemy *enemy) {
+void doBattle(Momotaro *momotaro, Character *companion, Enemy *enemy, int numCompanions) {
     BattleOutput fightOutput;
     Battle fight;
     fightOutput.doubleLineBreak();
@@ -212,16 +215,19 @@ void doBattle(Momotaro *momotaro, Character *companion, Enemy *enemy) {
     cout << endl;
     int totalDamageDealt = 0;
     int totalDamageTaken = enemy->getAtk();
-    if (choice == "ATTACK") {
+    if (choice == "STATS") {
+        StatsOutput stats;
+        stats.printStats(numCompanions);
+        cout << "Choose action for " << momotaro->getName() << ": ";
+        cin >> choice;
+        cout << endl;
+    } else if (choice == "ATTACK") {
         totalDamageDealt += momotaro->getAtk();
     } else if (choice == "DEFEND") {
         totalDamageTaken -= momotaro->getDef();
     } else if (choice == "HEAL") {
         InventoryMenu menu;
         menu.displayInventoryMenu();
-    } else if (choice == "STATS") {
-        StatsOutput stats;
-        stats.printStats(momotaro, companion);
     } else {
         cout << "Invalid action, turn forfeited" << endl;
     }
@@ -231,15 +237,18 @@ void doBattle(Momotaro *momotaro, Character *companion, Enemy *enemy) {
         cout << "Choose action for " << companion->getName() << ": ";
         cin >> choice;
         cout << endl;
-        if (choice == "ATTACK") {
+        if (choice == "STATS") {
+            StatsOutput stats;
+            stats.printStats(numCompanions);
+            cout << "Choose action for " << companion->getName() << ": ";
+            cin >> choice;
+            cout << endl;
+        } else if (choice == "ATTACK") {
             totalDamageDealt += companion->getAtk();
         } else if (choice == "DEFEND") {
             totalDamageTaken -= companion->getDef();
         } else if (choice == "SWAP") {
             // FIXME
-        } else if (choice == "STATS") {
-            StatsOutput stats;
-            stats.printStats(momotaro, companion);
         } else {
             cout << "Invalid action, turn forfeited" << endl << endl;
         }
