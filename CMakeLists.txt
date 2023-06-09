@@ -31,6 +31,8 @@ ADD_EXECUTABLE(game
     source/character.cpp
     source/enemy.cpp
     source/dog.cpp
+    source/monkey.cpp
+    source/bird.cpp
     source/momotaro.cpp
     source/statsOutput.cpp
     source/battle.cpp
