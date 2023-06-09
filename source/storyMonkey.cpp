@@ -16,8 +16,13 @@ void StoryMonkey::printNarrative() {
          << "Though somehow, en route to your destination, concerned citizens saw you two pass by their neighborhood — and they were understandably " << endl
          << "alarmed by your wounds and bruises. You ended up spending some time with them as they took their time to patch you two up." << endl << endl;
 
-    // ADJUST MOMOTARO HEALTH
-    // ADJUST DOG HEALTH
+     int HPdifference = momotaro.getMaxHP() - momotaro.getHP();
+     momotaro.setHP(momotaro.getHP() + HPdifference);
+     cout << "MOMOTARO HEALTH back to " << momotaro.getHP() << "!" << endl;
+
+     HPdifference = dog.getMaxHP() - dog.getHP();
+     dog.setHP(dog.getHP() + HPdifference);
+     cout << "DOG HEALTH back to " << dog.getHP() << "!" << endl << endl;
 
     cout << "YOU: \"It was nice of them to fix us up even if we didn't ask them to.\"" << endl << endl;
 
@@ -65,7 +70,7 @@ void StoryMonkey::printNarrative() {
 
     cout << "MONKEY: \"I'd be glad to. I can't just ignore the will of Son Goku, obviously.\"" << endl << endl;
     
-    // ADJUST AVAILABLE COMPANIONS
+     cout << "MONKEY joins your party!" << endl << endl;
 
     cout << "You introduced MONKEY and DOG to each other once the latter was done drinking from the nearby river." << endl
          << "They did not seem to like each other, but miraculously managed to keep their cool for the sake of a common cause." << endl << endl;

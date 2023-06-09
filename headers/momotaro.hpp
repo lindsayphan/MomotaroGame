@@ -11,7 +11,7 @@ class Momotaro: public Character {
   public:
     Momotaro();
     Momotaro(string n, int health, int maxHealth, int attack, int defense);
-    void heal(string item);
+    // void heal(string item);
     void defend(int enemyHP);
     void attack(Character *oni);
     void setAnimal(string animal);

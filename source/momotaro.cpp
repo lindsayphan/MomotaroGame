@@ -13,16 +13,16 @@ Momotaro::Momotaro(string n, int health, int maxHealth, int attack, int defense)
     this->def = defense;
 }
 
-void Momotaro::heal(string item) {
-    if (item == "green tea") {
-        hp += 10;
-        setHP(hp);
-    }
-    else if(item == "rice cakes") {
-        hp += 15;
-        setHP(hp);
-    }
-}
+// void Momotaro::heal(string item) {
+//     if (item == "green tea") {
+//         hp += 10;
+//         setHP(hp);
+//     }
+//     else if(item == "rice cakes") {
+//         hp += 15;
+//         setHP(hp);
+//     }
+// }
     
 void Momotaro::defend(int enemyHP) {
     int newAttack = enemyHP - this->def;

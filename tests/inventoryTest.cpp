@@ -1,5 +1,14 @@
 #include "../source/inventory.cpp"
+#include "../headers/momotaro.hpp"
+#include "../headers/dog.hpp"
+#include "../headers/monkey.hpp"
+#include "../headers/bird.hpp"
 #include "gtest/gtest.h"
+
+Momotaro momotaro = Momotaro("MOMOTARO", 20, 20, 10, 5);
+extern Dog dog;
+extern Monkey monkey;
+extern Bird bird;
 
 TEST(inventoryTest, helperCheck1) {
   Inventory *newInventory = new Inventory();

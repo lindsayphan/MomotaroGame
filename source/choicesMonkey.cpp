@@ -28,19 +28,16 @@ void ChoicesMonkey::executeAnswer2() {
         cout << "YOU: \"Would you like to accompany me to defeat the Devil King?\"" << endl << endl;
 
         cout << "You extended your hand towards it, a rice cake resting on your opened palm." << endl << endl;
-
-        cout << "MONKEY joins your party!" << endl << endl;
         
         if (gameLvl == 1) {
             monkey.setHP(monkey.getHP() + 3);
         }
     }
+    
 
     else {
         cout << "You ignored the sound and, as if nothing happened, you proceeded to ask what you meant to ask after hearing the connection it made." << endl << endl;
 
         cout << "YOU: \"Would you like to accompany me to defeat the Devil King?\"" << endl << endl;
-        
-        cout << "MONKEY joins your party!" << endl << endl;
     }
 }

@@ -26,8 +26,6 @@ void ChoicesDog::executeAnswer2() {
         gameInventory->useItem("rice cakes");
 
         cout << "DOG: \"Oh, thank you! I wasn't expecting you to give it up so easily, I apologize for being so rude. In return for your kindness, I will join you on your journey!\"" << endl << endl;
-
-        cout << "DOG joins your party!" << endl << endl;
         
         if (gameLvl == 1) {
             dog.setHP(dog.getHP() + 3);
@@ -44,7 +42,5 @@ void ChoicesDog::executeAnswer2() {
         cout << "YOU: \"I accept your apology. I haven't explored beyond my neighborhood before, thus it's reasonable for you to not know my face.\"" << endl << endl;
 
         cout << "DOG: \"Still, as an apology, I shall accompany you to your destination.\"" << endl << endl;
-
-        cout << "DOG joins your party!" << endl << endl;
     }
 }
