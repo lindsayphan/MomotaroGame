@@ -27,10 +27,10 @@ void ChoicesDog::executeAnswer2() {
 
         cout << "DOG: \"Oh, thank you! I wasn't expecting you to give it up so easily, I apologize for being so rude. In return for your kindness, I will join you on your journey!\"" << endl << endl;
 
-        // ADJUST AVAILABLE COMPANIONS
+        cout << "DOG joins your party!" << endl << endl;
         
         if (gameLvl == 1) {
-            // ADJUST DOG HEALTH
+            dog.setHP(dog.getHP() + 3);
         }
     }
 
@@ -45,6 +45,6 @@ void ChoicesDog::executeAnswer2() {
 
         cout << "DOG: \"Still, as an apology, I shall accompany you to your destination.\"" << endl << endl;
 
-        // ADJUST AVAILABLE COMPANIONS
+        cout << "DOG joins your party!" << endl << endl;
     }
 }
