@@ -73,10 +73,10 @@ The game is entirely played in the terminal and will mainly use two screens: one
 ## Screenshots
  > Screenshots of the input/output after running your application
 
-   ![story beinning ex](screencaps/beginning_of_game.PNG)
-   ![Battle Screen ex](screencaps/battle_screen_example.PNG)
-   ![Battle screen 2 ex](screencaps/battle_screen_example_2.PNG)
-   ![Lost Screen ex](screencaps/lost_screen.PNG)
+   ![story beinning ex](screencaps/beginning_of_game.png)
+   ![Battle Screen ex](screencaps/battle_screen_example.png)
+   ![Battle screen 2 ex](screencaps/battle_screen_example_2.png)
+   ![Lost Screen ex](screencaps/lost_screen.png)
 ## Installation/Usage
 Installing this project requires cloning a copy of this GitHub repository into an IDE of choice or just a computer's command line, as long as it supports C++ programming. Once the repository has been cloned, in the terminal/command line, type 'cmake .' — 'make' — './gameOn', respectively in that order. The game should load following the last command. For the best gaming experience, it is highly recommended that the CAPS LOCK key is on while playing.
 ## Testing
