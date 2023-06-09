@@ -10,7 +10,7 @@ _Momotaro: The Fight_ is a text-based role-playing game where the player embarks
 Why is it important or interesting to you?
 * The group unanimously agreed to create a role-playing game for our final project because everyone in the group likes to play games and finds joy in the wonders of storytelling. Furthermore, we wanted to see what it would be like to be on the development side of gaming instead of just playing.
  
-What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+What languages/tools/technologies do you plan to use?
 * To build the RPG, we used the following:  
     - _C++_ as the language  
     - _VSCode_ to write the code  
@@ -69,17 +69,10 @@ The game is entirely played in the terminal and will mainly use two screens: one
  The Inventory class contains all the items the player collects during the game. The class depends on the Item class because it needs the specific item that is to be added or subtracted from the inventory. It contains the healHP() function, which takes in a string item and, depending on the item passed in, returns a specific amount of HP to be added to the player's health.
 
  The Battle class contains the actions taken during the battle sequences in the game. It is dependent on the AfterBattles and BattleOutput class because the Battle class holds the damage taken/dealt to each of the characters which needs to be outputed for the user to see. 
- 
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. You should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
- 
+
 ## Screenshots
  > Screenshots of the input/output after running your application
 ## Installation/Usage
-Installing this project requires cloning a copy of this GitHub repository into an IDE of choice or just a computer's command line, as long as it supports C++ programming. Once the repository has been cloned, in the terminal/command line, type _FINISH INSTRUCTIONS!_
+Installing this project requires cloning a copy of this GitHub repository into an IDE of choice or just a computer's command line, as long as it supports C++ programming. Once the repository has been cloned, in the terminal/command line, type 'cmake .' — 'make' — './gameOn', respectively in that order. The game should load following the last command. For the best gaming experience, it is highly recommended that the CAPS LOCK key is on while playing.
 ## Testing
-This project was tested through _Google Test (gtest)_, as all developers practiced test-driven design. Unfortunately, not all classes/functions that exist within this program were eligible for such tests — specifically those that were meant to output in the terminal since this is, after all, a terminal-based RPG. Thus, to test the functionality of output calls, the program was run in the terminal countless times throughout the entire production, and we manually verified that the output was correct. Furthermore, _Valgrind_ was utilized to eliminate potential memory leaks.
+This project was tested through _Google Test (gtest)_, as all developers practiced test-driven design. Unfortunately, not all classes/functions that exist within this program were eligible for such tests — specifically those that were meant to output in the terminal since this is, after all, a terminal-based RPG. Thus, to test the functionality of output calls, the program was run in the terminal countless times throughout the entire production and we manually verified that the output was correct. Furthermore, _Valgrind_ was utilized to eliminate any potential memory leaks.
