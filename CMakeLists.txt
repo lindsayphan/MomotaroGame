@@ -7,6 +7,7 @@ ADD_SUBDIRECTORY(tests/googletest)
 # valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all ./narrative
 
 ADD_EXECUTABLE(test
+    tests/battleTest.cpp
     tests/battleOutputTest.cpp
     tests/birdTest.cpp
     tests/characterTest.cpp
@@ -22,7 +23,7 @@ ADD_EXECUTABLE(test
     tests/monkeyTest.cpp
     tests/startOverTest.cpp
     tests/statsOutputTest.cpp
-    tests/swapTest.cpp
+    tests/swapTest.cpp  
 )
 
 ADD_EXECUTABLE(game

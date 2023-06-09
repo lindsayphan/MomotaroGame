@@ -6,6 +6,7 @@ using namespace std;
 
 bool startOver::restartPrompt(bool battleLost) {
     if (battleLost == true) {
+        this->restartAnswerInput();
         if (this->restartGetAnswer() == 'y') {
             restartTrue();
             return true;

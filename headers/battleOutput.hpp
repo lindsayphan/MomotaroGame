@@ -1,5 +1,6 @@
 #ifndef BATTLEOUTPUT_HPP
 #define BATTLEOUTPUT_HPP
+#include "battle.hpp"
 #include <string>
 using namespace std;
 
@@ -8,7 +9,8 @@ class BattleOutput {
     void out(int color, int emphasis, string text) const;
     void doubleLineBreak() const;
     void singleLineBreak() const;
-    void printHealthBar(string name, int currHealth, int maxHealth) const;   
+    void printHealthBar(string name, int currHealth, int maxHealth) const;
+    void damageTakenMessage() const;
 };
 
 #endif

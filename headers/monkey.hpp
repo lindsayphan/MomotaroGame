@@ -3,15 +3,15 @@
 #include <iostream>
 #include <string>
 #include "../headers/character.hpp"
+#include "../headers/enemy.hpp"
 using namespace std;
 
 class Monkey: public Character {
   public:
     Monkey();
-    Monkey(string n, int health, int maxHealth, int attack, int defense);
-    // void swap(string characterName);
+    Monkey(string _name, int _maxHP, int _atk, int _def) : Character(_name, _maxHP, _atk, _def) {}
     void defend(int enemyHP);
-    void attack(Character *oni);
+    void attack(Enemy *oni);
 };
 
 #endif
