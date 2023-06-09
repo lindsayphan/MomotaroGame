@@ -71,12 +71,15 @@ The game is entirely played in the terminal and will mainly use two screens: one
  The Battle class contains the actions taken during the battle sequences in the game. It is dependent on the AfterBattles and BattleOutput class because the Battle class holds the damage taken/dealt to each of the characters which needs to be outputed for the user to see. 
 
 ## Screenshots
- > Screenshots of the input/output after running your application
-
+Story screenshot example:
    ![story beinning ex](screencaps/beginning_of_game.png)
+Battle screenshot example:
    ![Battle Screen ex](screencaps/battle_screen_example.png)
+Battle screenshot example 2:
    ![Battle screen 2 ex](screencaps/battle_screen_example_2.png)
+Battle lost screenshot example:
    ![Lost Screen ex](screencaps/lost_screen.png)
+   
 ## Installation/Usage
 Installing this project requires cloning a copy of this GitHub repository into an IDE of choice or just a computer's command line, as long as it supports C++ programming. Once the repository has been cloned, in the terminal/command line, type 'cmake .' — 'make' — './gameOn', respectively in that order. The game should load following the last command. For the best gaming experience, it is highly recommended that the CAPS LOCK key is on while playing.
 ## Testing
