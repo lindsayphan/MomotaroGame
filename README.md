@@ -72,7 +72,13 @@ The game is entirely played in the terminal and will mainly use two screens: one
 
 ## Screenshots
  > Screenshots of the input/output after running your application
+
+    ![story beinning ex](screencaps/beginning_of_game.PNG)
+    ![Battle Screen ex](screencaps/battle_screen_example.PNG)
+    ![Battle screen 2 ex](screencaps/battle_screen_example_2.PNG)
+    ![Lost Screen ex](screencaps/lost_screen.PNG)
 ## Installation/Usage
 Installing this project requires cloning a copy of this GitHub repository into an IDE of choice or just a computer's command line, as long as it supports C++ programming. Once the repository has been cloned, in the terminal/command line, type 'cmake .' — 'make' — './gameOn', respectively in that order. The game should load following the last command. For the best gaming experience, it is highly recommended that the CAPS LOCK key is on while playing.
 ## Testing
+17 Unit tests were conducted on the final project code.
 This project was tested through _Google Test (gtest)_, as all developers practiced test-driven design. Unfortunately, not all classes/functions that exist within this program were eligible for such tests — specifically those that were meant to output in the terminal since this is, after all, a terminal-based RPG. Thus, to test the functionality of output calls, the program was run in the terminal countless times throughout the entire production and we manually verified that the output was correct. Furthermore, _Valgrind_ was utilized to eliminate any potential memory leaks.
