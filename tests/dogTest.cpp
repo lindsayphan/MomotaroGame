@@ -45,14 +45,14 @@ TEST(DogTest, testDefense2) {
 
 TEST(DogTest, testAttack) {
     Dog *d = new Dog("Dog", 10, 5, 5);
-    Character *enemy = new Character("ONI", 50, 5, 0);
+    Enemy *enemy = new Enemy("ONI", 50, 5, 0);
     d->attack(enemy);
     EXPECT_EQ(45, enemy->getHP());
 }
 
 TEST(DogTest, testAttack2) {
     Dog *d = new Dog("Dog", 10, 3, 3);
-    Character *enemy = new Character("ONI", 20, 5, 0);
+    Enemy *enemy = new Enemy("ONI", 20, 5, 0);
     d->attack(enemy);
     EXPECT_EQ(17, enemy->getHP());
 }
