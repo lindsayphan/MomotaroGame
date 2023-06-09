@@ -8,12 +8,14 @@
 #include "headers/momotaro.hpp"
 #include "headers/enemy.hpp"
 #include "headers/dog.hpp"
+#include "headers/monkey.hpp"
 
 using namespace std;
 
 Inventory* gameInventory = new Inventory();
 
 bool startOverPrompt();
+void doBattle(Momotaro *momotaro, Character *companion, Enemy *enemy);
 
 int main() {
 
@@ -27,75 +29,46 @@ int main() {
         storyline.beginning();
 
         // BATTLE 1
-        BattleOutput fightOutput;
-        Battle fight;
-        Enemy *enemy = new Enemy("SMALL ONI", 30, 8, 5);
+        Enemy *enemy1 = new Enemy("SMALL ONI", 30, 8, 5);
         Momotaro *momotaro = new Momotaro();
         Dog *dog = new Dog();
-        while (enemy->getHP() != 0) {
-            fightOutput.doubleLineBreak();
-            fightOutput.printHealthBar(enemy->getName(), enemy->getHP(), enemy->getMaxHP());
-            fightOutput.printHealthBar(momotaro->getName(), momotaro->getHP(), momotaro->getMaxHP());
-            fightOutput.printHealthBar(dog->getName(), dog->getHP(), dog->getMaxHP());
-            fightOutput.singleLineBreak();
-            fightOutput.printMomotaroChoices();
-            cout << "Choose action for " << momotaro->getName() << ": ";
-            string choice;
-            cin >> choice;
-            cout << endl;
-            int totalDamageDealt = 0;
-            int totalDamageTaken = enemy->getAtk();
-            if (choice == "ATTACK") {
-                totalDamageDealt += momotaro->getAtk();
-            } else if (choice == "DEFEND") {
-                totalDamageTaken -= momotaro->getDef();
-            } else if (choice == "HEAL") {
-                // FIXME
-            } else if (choice == "STATS") {
-                StatsOutput stats;
-                stats.printStats(momotaro, dog);
-            } else {
-                cout << "Invalid action, turn forfeited" << endl;
-            }
 
-            fightOutput.printCompanionChoices();
-            cout << "Choose action for " << dog->getName() << ": ";
-            cin >> choice;
-            cout << endl;
-            if (choice == "ATTACK") {
-                totalDamageDealt += dog->getAtk();
-            } else if (choice == "DEFEND") {
-                totalDamageTaken -= dog->getDef();
-            } else if (choice == "SWAP") {
-                // FIXME
-            } else if (choice == "STATS") {
-                StatsOutput stats;
-                stats.printStats(momotaro, dog);
-            } else {
-                cout << "Invalid action, turn forfeited" << endl;
-            }
-
-            fight.damageDealt(enemy,totalDamageDealt);
-            fightOutput.out(32,0, to_string(totalDamageDealt) + " DAMAGE dealt to " + enemy->getName());
-            fightOutput.singleLineBreak();
-            fight.damageTaken(momotaro, dog, enemy);
-            fightOutput.out(31,0, to_string(totalDamageTaken/2) + " DAMAGE dealt to " + momotaro->getName());
-            fightOutput.out(31,0, to_string(totalDamageTaken/2) + " DAMAGE dealt to " + dog->getName());       
-            // FIXME: CHECK IF LOOP WORKS CORRECTLY
-            fightOutput.doubleLineBreak();
+        while (enemy1->getHP() > 0 && momotaro->getHP() > 0) {
+            doBattle(momotaro, dog, enemy1);
         }
-        // BATTLE 1 [battleLost = battle()];
+        delete enemy1;
+        if (momotaro->getHP() <= 0) {
+            cout << "MOMOTARO DIED";
+            battleLost = true;
+        }
+        if (battleLost == true) {
+            repeat = startOverPrompt();
+                if (!repeat) {
+                    cout << "Thank you for playing!" << endl << endl;
+                    gameIsPlaying = false;
+                    continue;
+                }
+        }
 
-        // storyline.middle();
-        // // BATTLE 2 [battleLost = battle()];
-        // if (battleLost == true) {
-        //     repeat = startOverPrompt();
-        //         if (!repeat) {
-        //             cout << "Thank you for playing!" << endl << endl;
-        //             gameIsPlaying = false;
-        //             continue;
-        //         }
-        // }
+        storyline.middle();
+        //BATTLE 2
+        Enemy *enemy2 = new Enemy("MEDIUM ONI", 50, 10, 10);
+        Monkey *monkey = new Monkey();
+        while (enemy2->getHP() > 0 && momotaro->getHP() > 0) {
+            doBattle(momotaro, monkey, enemy2);
+        }
+        if (momotaro->getHP() <= 0) {
+            cout << "MOMOTARO DIED";
+            battleLost = true;
+        }
+        if (battleLost == true) {
+            repeat = startOverPrompt();
+                if (!repeat) {
+                    cout << "Thank you for playing!" << endl << endl;
+                    gameIsPlaying = false;
+                    continue;
+                }
+        }
     
         // storyline.finale();
         // // FINAL BATTLE [battleLost = battle()];
@@ -149,5 +122,67 @@ bool startOverPrompt() {
 
     else {
         return false;
+    }
+}
+
+void doBattle(Momotaro *momotaro, Character *companion, Enemy *enemy) {
+    BattleOutput fightOutput;
+    Battle fight;
+    fightOutput.doubleLineBreak();
+    fightOutput.printHealthBar(enemy->getName(), enemy->getHP(), enemy->getMaxHP());
+    fightOutput.printHealthBar(momotaro->getName(), momotaro->getHP(), momotaro->getMaxHP());
+    fightOutput.printHealthBar(companion->getName(), companion->getHP(), companion->getMaxHP());
+    fightOutput.singleLineBreak();
+    fightOutput.printMomotaroChoices();
+    cout << "Choose action for " << momotaro->getName() << ": ";
+    string choice;
+    cin >> choice;
+    cout << endl;
+    int totalDamageDealt = 0;
+    int totalDamageTaken = enemy->getAtk();
+    if (choice == "ATTACK") {
+        totalDamageDealt += momotaro->getAtk();
+    } else if (choice == "DEFEND") {
+        totalDamageTaken -= momotaro->getDef();
+    } else if (choice == "HEAL") {
+        // FIXME
+    } else if (choice == "STATS") {
+        StatsOutput stats;
+        stats.printStats(momotaro, companion);
+    } else {
+        cout << "Invalid action, turn forfeited" << endl;
+    }
+
+    if (companion->getHP() > 0) {
+        fightOutput.printCompanionChoices();
+        cout << "Choose action for " << companion->getName() << ": ";
+        cin >> choice;
+        cout << endl;
+        if (choice == "ATTACK") {
+            totalDamageDealt += companion->getAtk();
+        } else if (choice == "DEFEND") {
+            totalDamageTaken -= companion->getDef();
+        } else if (choice == "SWAP") {
+            // FIXME
+        } else if (choice == "STATS") {
+            StatsOutput stats;
+            stats.printStats(momotaro, companion);
+        } else {
+            cout << "Invalid action, turn forfeited" << endl;
+        }
+    }
+
+    fight.damageDealt(enemy,totalDamageDealt);
+    fightOutput.out(32,0, to_string(totalDamageDealt) + " DAMAGE dealt to " + enemy->getName());
+    fightOutput.singleLineBreak();
+    fight.damageTaken(momotaro, companion, enemy);
+    if (enemy->getHP() > 0) {
+        if (totalDamageTaken < 0) {
+            totalDamageTaken = 0;
+        }
+        fightOutput.out(31,0, to_string(totalDamageTaken/2) + " DAMAGE dealt to " + momotaro->getName());
+        if (companion->getHP() > 0) {
+            fightOutput.out(31,0, to_string(totalDamageTaken/2) + " DAMAGE dealt to " + companion->getName());
+        }
     }
 }
